@@ -1,0 +1,60 @@
+<?php
+use yii\bootstrap4\Nav;
+use yii\bootstrap4\NavBar;
+use yii\helpers\Html;
+use yii\bootstrap4\ActiveForm;
+
+    NavBar::begin([
+        'brandLabel' => '<i class="fas fa-mug-hot"></i>&nbsp;&nbsp;'.Yii::$app->name,
+        'brandUrl' => Yii::$app->homeUrl,
+        'options' => [
+            'class' => 'shadow navbar-expand-lg navbar-light bg-light'
+        ],
+    ]);
+    ?>
+    <?php if (!Yii::$app->user->isGuest) : ?>
+        <?php if ((Yii::$app->request->url == '/') || (Yii::$app->request->url == '/site/index')) : ?>
+                <form onsubmit="searchProjects(event)" style="width:30%" class="mb-3 mt-3">
+                    <div class="position-relative" data-placement="bottom" id="searchProjects" data-toggle="popover" data-html="true" data-content="<strong>Silahkan Cari Projek Disini</strong>">
+                        <abbr title="Cari Projek">
+                            <button type="submit" class="btn btn-dark position-absolute" style="right:0"><i class="fas fa-search"></i></button>
+                        </abbr>
+                        <input type="text" autocomplete="off" placeholder="Cari Projek" class="form-control" id="search" list="projects">
+                    </div>
+                    <datalist id="projects"></datalist>
+                </form>
+        <?php endif; ?>
+    <?php endif; ?>
+
+    <?php
+    
+    if (Yii::$app->user->isGuest) {
+        $menuItems[] = ['label' => '<i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;Daftar', 'url' => ['/site/signup']];
+        $menuItems[] = ['label' => '<i class="fas fa-user"></i>&nbsp;&nbsp;Masuk', 'url' => ['/site/login']];
+    } else {
+        $menuItems[] = ['label' => '<i class="fas fa-clipboard-list"></i>&nbsp;&nbsp;Projek', 'url' => ['/site/index']];
+        $menuItems[] = ['label' => '<i class="fas fa-tools"></i>&nbsp;&nbsp;Akun', 'url' => ['/site/account']];
+
+        $menuItems[] = [
+            'label' => '<i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;Keluar ('.Yii::$app->user->identity->username.')',
+            'url' => ['/site/logout'],
+            'linkOptions' => [
+                'data-method' => 'post'
+            ],
+        ];
+
+        
+
+    }
+    
+    echo Nav::widget([
+        'options' => ['class' => 'nav-pills nav-fill ml-auto'], 
+        'items' => $menuItems,
+        'encodeLabels' => false,
+    ]);
+
+    ?>
+
+    <?php
+        NavBar::end();
+    ?>

@@ -1,0 +1,154 @@
+2021-01-07 04:27:00 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[08006] [7] FATAL:  database "postube" does not exist in C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\Connection.php:710
+Stack trace:
+#0 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\Connection.php(710): PDO->__construct('pgsql:host=loca...', 'postgres', 'loli', NULL)
+#1 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\Connection.php(1030): yii\db\Connection->open()
+#3 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\Schema.php(463): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\Connection.php(909): yii\db\Schema->quoteValue('migration')
+#6 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\pgsql\Schema.php(464): yii\db\Connection->quoteValue('migration')
+#7 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\pgsql\Schema.php(192): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#10 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(894): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\console\Controller.php(184): yii\base\Controller->runAction('', Array)
+#17 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\base\Module.php(534): yii\console\Controller->runAction('', Array)
+#18 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\console\Application.php(181): yii\base\Module->runAction('migrate', Array)
+#19 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\console\Application.php(148): yii\console\Application->runAction('migrate', Array)
+#20 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\base\Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 C:\xampp\htdocs\advnc\yii(23): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[08006] [7] FATAL:  database "postube" does not exist in C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\Connection.php:642
+Stack trace:
+#0 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\Connection.php(1030): yii\db\Connection->open()
+#1 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\Connection.php(1017): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\Schema.php(463): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\Connection.php(909): yii\db\Schema->quoteValue('migration')
+#4 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\pgsql\Schema.php(464): yii\db\Connection->quoteValue('migration')
+#5 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\pgsql\Schema.php(192): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#8 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(894): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\console\Controller.php(184): yii\base\Controller->runAction('', Array)
+#15 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\base\Module.php(534): yii\console\Controller->runAction('', Array)
+#16 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\console\Application.php(181): yii\base\Module->runAction('migrate', Array)
+#17 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\console\Application.php(148): yii\console\Application->runAction('migrate', Array)
+#18 C:\xampp\htdocs\advnc\vendor\yiisoft\yii2\base\Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 C:\xampp\htdocs\advnc\yii(23): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2021-01-07 04:27:00 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ACLOCAL_PATH' => 'C:\\Program Files\\Git\\mingw64\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\ACER\\AppData\\Roaming'
+    'APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL' => 'true'
+    'CHROME_CRASHPAD_PIPE_NAME' => '\\\\.\\pipe\\crashpad_2836_ICVZHBQWFLXXXAUX'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'ACER-PC'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'CONFIG_SITE' => 'C:/Program Files/Git/mingw64/etc/config.site'
+    'DISPLAY' => 'needs-to-be-defined'
+    'EXEPATH' => 'C:\\Program Files\\Git'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GOOGLE_DEFAULT_CLIENT_ID' => 'no'
+    'GOOGLE_DEFAULT_CLIENT_SECRET' => 'no'
+    'HOME' => 'C:\\Users\\ACER'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\ACER'
+    'HOSTNAME' => 'ACER-PC'
+    'INFOPATH' => 'C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info'
+    'LANG' => 'en_US.UTF-8'
+    'LOCALAPPDATA' => 'C:\\Users\\ACER\\AppData\\Local'
+    'LOGONSERVER' => '\\\\ACER-PC'
+    'MANPATH' => 'C:\\Program Files\\Git\\mingw64\\local\\man;C:\\Program Files\\Git\\mingw64\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man'
+    'MINGW_CHOST' => 'x86_64-w64-mingw32'
+    'MINGW_PACKAGE_PREFIX' => 'mingw-w64-x86_64'
+    'MINGW_PREFIX' => 'C:/Program Files/Git/mingw64'
+    'MSYSTEM' => 'MINGW64'
+    'MSYSTEM_CARCH' => 'x86_64'
+    'MSYSTEM_CHOST' => 'x86_64-w64-mingw32'
+    'MSYSTEM_PREFIX' => 'C:/Program Files/Git/mingw64'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'ORIGINAL_PATH' => 'C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\ACER\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\nodejs;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Users\\ACER\\AppData\\Local\\Programs\\Python\\Python37\\Scripts;C:\\Users\\ACER\\AppData\\Local\\Programs\\Python\\Python37;C:\\Users\\ACER\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\ACER\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ACER\\AppData\\Roaming\\npm'
+    'ORIGINAL_TEMP' => 'C:/Users/ACER/AppData/Local/Temp'
+    'ORIGINAL_TMP' => 'C:/Users/ACER/AppData/Local/Temp'
+    'ORIGINAL_XDG_CURRENT_DESKTOP' => 'undefined'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\Users\\ACER\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\ACER\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\nodejs;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Users\\ACER\\AppData\\Local\\Programs\\Python\\Python37\\Scripts;C:\\Users\\ACER\\AppData\\Local\\Programs\\Python\\Python37;C:\\Users\\ACER\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\ACER\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\ACER\\AppData\\Roaming\\npm;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PKG_CONFIG_PATH' => 'C:\\Program Files\\Git\\mingw64\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw64\\share\\pkgconfig'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'C:/xampp/htdocs/advnc'
+    'SESSIONNAME' => 'Console'
+    'SHELL' => 'C:\\Program Files\\Git\\usr\\bin\\bash.exe'
+    'SHLVL' => '2'
+    'SSH_ASKPASS' => 'C:/Program Files/Git/mingw64/libexec/git-core/git-gui--askpass'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ACER\\AppData\\Local\\Temp'
+    'TERM' => 'xterm'
+    'TMP' => 'C:\\Users\\ACER\\AppData\\Local\\Temp'
+    'TMPDIR' => 'C:\\Users\\ACER\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'ACER-PC'
+    'USERNAME' => 'ACER'
+    'USERPROFILE' => 'C:\\Users\\ACER'
+    'VS100COMNTOOLS' => 'C:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\Common7\\Tools\\'
+    'WINDIR' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'YII_PATH' => 'C:\\xampp\\htdocs\\advnc\\'
+    '_' => 'C:/Program Files/Microsoft VS Code/Code.exe'
+    'TERM_PROGRAM' => 'vscode'
+    'TERM_PROGRAM_VERSION' => '1.52.0'
+    'COLORTERM' => 'truecolor'
+    'VSCODE_GIT_IPC_HANDLE' => '\\\\.\\pipe\\vscode-git-5126105ff4-sock'
+    'GIT_ASKPASS' => 'c:\\Program Files\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh'
+    'VSCODE_GIT_ASKPASS_NODE' => 'C:\\Program Files\\Microsoft VS Code\\Code.exe'
+    'VSCODE_GIT_ASKPASS_MAIN' => 'c:\\Program Files\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js'
+    'PHP_SELF' => 'C:\\xampp\\htdocs\\advnc\\yii'
+    'SCRIPT_NAME' => 'C:\\xampp\\htdocs\\advnc\\yii'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\advnc\\yii'
+    'PATH_TRANSLATED' => 'C:\\xampp\\htdocs\\advnc\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1609990020.032
+    'REQUEST_TIME' => 1609990020
+    'argv' => [
+        0 => 'C:\\xampp\\htdocs\\advnc\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
