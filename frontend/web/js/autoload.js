@@ -15,13 +15,20 @@ $(document).ready(() => {
         $('#card').modal('toggle');
     });
 
+    $('#imgModalDisplay').on('hidden.bs.modal', function () {
+        $('#card').modal('toggle');
+    });
+
     $("#card_desc").summernote({
         codeviewFilter: false,
         codeviewIframeFilter: true,
+        dialogsInBody: true,
+        disableDragAndDrop: true,
+        dialogsFade: true,
         placeholder: 'Deskripsi',
           height: 300,
           toolbar: [
-            ['font', ['bold', 'underline']],
+            ['font', ['bold', 'underline', 'italic']],
             ['color', ['color']],
             ['para', ['ul', 'ol']],
             ['insert', ['link', 'picture']],
@@ -35,6 +42,11 @@ $(document).ready(() => {
       }
   });
 
+    $('.note-modal').on('hidden.bs.modal', function () {
+        $('#newCard').modal('hide');
+        $('#newCard').modal('show');
+    });
+
     function sendFile(file, el) {
       var form_data = new FormData();
       form_data.append('file', file);
@@ -46,13 +58,9 @@ $(document).ready(() => {
           contentType: false,
           processData: false,
           success: function(url) {
-              $(el).summernote('pasteHTML', '<img onclick="displayImgModal(event)" class="img-fluid hover-pointer" src="'+url+'" />');
+              $(el).summernote('pasteHTML', '<img onclick="displayImgModal(event)" class="img-fluid img-description hover-pointer rounded" src="'+url+'" />');
           }
       });
     }
-
-    $('.note-insert button').click(() => {
-      // $('#newCard').modal('hide');
-    });
 
 });

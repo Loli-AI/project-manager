@@ -107,7 +107,7 @@ function editDataCard(e) {
     load(1);
     e.preventDefault();
     let formData = new FormData;
-    formData.append("data", $("#card_desc_input").val());
+    formData.append("data", $("#card_desc_input").summernote('code'));
     formData.append("id", $("#submit_card_desc").attr("data-id"));
     $.ajax({
         url: '/action/edit-card-description',
@@ -125,6 +125,7 @@ function editDataCard(e) {
 function getCards(id, dom, setting, list_id) {
     let formData = new FormData;
     formData.append("id", id);
+    load(1);
     $.ajax({
         url: '/action/get-cards',
         type: 'post',
@@ -144,6 +145,7 @@ function getCards(id, dom, setting, list_id) {
             dom.innerHTML += data.response.allCard[0].title;
             dom.appendChild(hr);
             hr.appendChild(date);
+            load(0);
         }
     });
 }
@@ -175,7 +177,7 @@ function addCard(e) {
     var formData = new FormData;
     formData.append("card_id", $("#card_id").val());
     formData.append("title", $("#card_title").val());
-    formData.append("description", $("#card_desc").val());
+    formData.append("description", $("#card_desc").summernote('code'));
     load(1);
     $.ajax({
         url: '/action/add-card',
@@ -185,7 +187,7 @@ function addCard(e) {
         contentType: false,
         success: function (data) {
             $("#card_title").val("");
-            $("#card_desc").val("");
+            $("#card_desc").summernote('code', '');
             mess("alert-success", `Topik <strong>${data}</strong> Telah Dibuat`);
             load(0);
             async function erase() {
@@ -217,14 +219,14 @@ function refreshCard(id) {
                 $('[data-id="comment_button"]').attr('id', data.response.cardData[0].id);
                 document.querySelector("#submit_card_desc").dataset.id = data.response.cardData[0].id;
                 $("#cardTitle").html(data.response.cardData[0].title);
-                if (data.response.cardData[0].description == "") {
+                if (data.response.cardData[0].description == "" || data.response.cardData[0].description == "<p><br></p>") {
                     $("#cardDesc").html("<i>~ Tidak Ada Deskripsi ~</i>");
                 } else {
                     $("#cardDesc").html(data.response.cardData[0].description);
                 }
 
                 if (data.response.cardData[0].id_comment == "") {
-                    document.querySelector("#comments").innerHTML = "<i>~ Tidak Ada Komentar ~</i>";
+                    document.querySelector("#comments").innerHTML = "<i>~ Belum Ada Komentar ~</i>";
                 } else {
                     id_comments.forEach((id_comment) => {
                         let cont = document.createElement("div");
@@ -235,7 +237,6 @@ function refreshCard(id) {
                         document.querySelector("#comments").appendChild(cont);
                     });
                 }
-                $("#card_desc_input").val(data.response.cardData[0].description);
                 $("#cardDesc").show();
             }
             appendData().then(() => {
@@ -370,7 +371,7 @@ function getLists() {
 
                 let popover = document.createElement("i");
                 // Role = button
-                popover.setAttribute('class', 'fas fa-sliders-h no-click btn-sm btn-light ml-1 btn btn-dark p-2');
+                popover.setAttribute('class', 'fas fa-sliders-h no-click btn-sm ml-1 btn btn-dark p-2');
                 popover.dataset.toggle = 'popover';
                 popover.dataset.placement = 'left';
                 popover.setAttribute('title', "<i class='fas fa-cog'>&nbsp;&nbsp;Pengaturan");
@@ -611,7 +612,7 @@ function searchProjects(e) {
 
                 let popover = document.createElement("i");
                 // Role = button
-                popover.setAttribute('class', 'fas fa-sliders-h no-click btn-sm btn-light ml-1 btn btn-dark p-2');
+                popover.setAttribute('class', 'fas fa-sliders-h no-click btn-sm ml-1 btn btn-dark p-2');
                 popover.dataset.toggle = 'popover';
                 popover.dataset.placement = 'left';
                 popover.setAttribute('title', "<i class='fas fa-cog'>&nbsp;&nbsp;Pengaturan");

@@ -80,7 +80,6 @@ class SiteController extends Controller
     public function actionIndex()
     {
         Yii::$app->name = "Projek";
-        Yii::$app->params['title'] = "Silahkan Pilih Projek Terlebih Dahulu";
         return $this->render('index');
     }
 

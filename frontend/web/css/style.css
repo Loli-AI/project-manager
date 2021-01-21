@@ -5,10 +5,6 @@
     padding-top: 20px;
 }
 
-.class {
-    display: none!important;
-}
-
 .dragItem {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
     padding: 6px;
@@ -25,6 +21,18 @@
    -webkit-box-orient: vertical;
    -webkit-line-clamp: 6;
    overflow: hidden;
+}
+
+.img-description {
+    transition: .5s;
+}
+
+.img-description:hover {
+    filter: brightness(50%);
+}
+
+#imgModal {
+    transform: scale(1.5);
 }
 
 .no-click:focus {

@@ -1,3 +1,6 @@
+let editCardToggle = 1;
+let editCardData = "";
+
 function load(data) {
     if (data == "1") {
         $('#load').modal('show');
@@ -15,7 +18,60 @@ function mess(className, message) {
 function editCard() {
     $("#cardDesc").toggle();
     $("#submit_card_desc").toggle();
-    $("#card_desc_input").toggle();
+    if (editCardToggle) {
+        $("#card_desc_input").summernote({
+        codeviewFilter: false,
+        codeviewIframeFilter: true,
+        dialogsInBody: true,
+        disableDragAndDrop: true,
+        dialogsFade: true,
+        placeholder: 'Deskripsi',
+          height: 300,
+          toolbar: [
+            ['font', ['bold', 'underline', 'italic']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol']],
+            ['insert', ['link', 'picture']],
+          ],
+           callbacks: {
+          onImageUpload : function(files, editor, welEditable) {
+               for(var i = files.length - 1; i >= 0; i--) {
+                  sendFile(files[i], this);
+              }
+          }
+        }
+    });
+
+    $('.note-modal').on('hidden.bs.modal', function () {
+        $('#card').modal('hide');
+        $('#card').modal('show');
+    });
+
+    function sendFile(file, el) {
+      var form_data = new FormData();
+      form_data.append('file', file);
+      $.ajax({
+          data: form_data,
+          type: "POST",
+          url: '/action/upload-image',
+          cache: false,
+          contentType: false,
+          processData: false,
+          success: function(url) {
+              $(el).summernote('pasteHTML', '<img onclick="displayImgModal(event)" class="img-fluid img-description hover-pointer rounded" src="'+url+'" />');
+          }
+      });
+    }
+
+    $("#card_desc_input").summernote('code', $("#cardDesc").html());
+    editCardToggle = 0;
+    } else {
+        $("#card_desc_input").summernote('destroy');
+        $("#card_desc_input").hide();
+        editCardToggle = 1;
+    }
+    
+
 }
 
 function modalCardTitle() {
@@ -41,16 +97,8 @@ function addLinkDescription(e) {
     $("#linkModal").modal('toggle');
 }
 
-function togglePreviewPopover() {
-    $('#preview').popover('show');
-}
-
-function preview() {
-    $("#contentPreview").html($("#card_desc").val()); 
-    $("#titlePreview").html($("#card_title").val()); titlePreview
-}
-
 function displayImgModal(e) {
   $('#imgModal').attr('src', e.target.src);
+  $('#card').modal('toggle');
   $('#imgModalDisplay').modal('toggle');
 };
