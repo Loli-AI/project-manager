@@ -36,7 +36,7 @@ class ActionController extends Controller
                         'roles' => ['?'],
                     ],
                     [
-                        'actions' => ['add-list', 'add-comment', 'add-card', 'get-lists', 'get-cards', 'get-card-data', 'get-comment', 'edit-card', 'delete-list', 'delete-card', 'move-card', 'edit-card-title', 'edit-list-title', 'get-projects', 'upload-image'],
+                        'actions' => ['add-list', 'add-comment', 'add-card', 'get-lists', 'get-cards', 'get-card-data', 'get-comment', 'edit-card', 'delete-list', 'delete-card', 'move-card', 'edit-card-title', 'edit-list-title', 'get-projects'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -471,19 +471,15 @@ class ActionController extends Controller
     public function actionUploadImage()
     {
         $req = Yii::$app->request;
-        // Yii::$app->response->format = Response::FORMAT_JSON;
-        
         if ($req->isAjax) {
             if(empty($_FILES['file'])) {
                 exit();
             }
 
-            // $errorImgFile = "./img/img_upload_error.jpg";
             $temp = explode(".", $_FILES["file"]["name"]);
             $newfilename = round(microtime(true)) . '.' . end($temp);
-            $destinationFilePath = '../web/img-uploads/'.$newfilename;
-            $src = "/img-uploads/" . $newfilename;
-
+            $destinationFilePath = 'img-uploads/' . $newfilename;
+            $src = '/img-uploads/' . $newfilename;
             if(!move_uploaded_file($_FILES['file']['tmp_name'], $destinationFilePath)){
                 echo "Gagal Memasukkan File";
                 return false;
@@ -492,9 +488,9 @@ class ActionController extends Controller
                 echo $src;
                 return false;
             }
-            
 
         }
-        $this->redirect('/site/error');
+
+        // $this->redirect('/site/error');
     }
 }

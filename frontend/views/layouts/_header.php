@@ -4,6 +4,10 @@ use yii\bootstrap4\NavBar;
 use yii\helpers\Html;
 use yii\bootstrap4\ActiveForm;
 
+$url = explode("/", Yii::$app->request->url);
+$mainUrl = "/" . $url[1];
+$domain = $mainUrl;
+
     NavBar::begin([
         'brandLabel' => '<i class="fas fa-mug-hot"></i>&nbsp;&nbsp;'.Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
@@ -13,7 +17,7 @@ use yii\bootstrap4\ActiveForm;
     ]);
     ?>
     <?php if (!Yii::$app->user->isGuest) : ?>
-        <?php if ((Yii::$app->request->url == '/') || (Yii::$app->request->url == '/site/index')) : ?>
+        <?php if ((Yii::$app->request->url == $domain . "/") || (Yii::$app->request->url == $domain . "/site/index") || (Yii::$app->request->url == $domain . "/site/") || (Yii::$app->request->url == $domain . "/site") || (Yii::$app->request->url == $domain . "/site/index/")) : ?>
                 <form onsubmit="searchProjects(event)" style="width:30%" class="mb-3 mt-3">
                     <div class="position-relative" data-placement="bottom" id="searchProjects" data-toggle="popover" data-html="true" data-content="<strong>Lihat Daftar Projek Disini</strong>">
                         <abbr title="Cari Projek">
