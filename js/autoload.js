@@ -60,7 +60,13 @@ $(document).ready(() => {
     }
 
     $('#card').on('hidden.bs.modal', function () {
-        // editCard();
+      if ($("#cardDesc").css('display') == 'none') {
+        $("#cardDesc").toggle();
+        $("#submit_card_desc").toggle();
+        $("#card_desc_input").summernote('destroy');
+        $("#card_desc_input").hide();
+        editCardToggle = 1;
+      }
     });
 
 });

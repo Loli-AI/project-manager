@@ -4,7 +4,9 @@ use yii\bootstrap4\NavBar;
 use yii\helpers\Html;
 use yii\bootstrap4\ActiveForm;
 
-$domain = Yii::$app->params['domain'];
+$url = explode("/", Yii::$app->request->url);
+$mainUrl = "/" . $url[1];
+$domain = $mainUrl;
 
     NavBar::begin([
         'brandLabel' => '<i class="fas fa-mug-hot"></i>&nbsp;&nbsp;'.Yii::$app->name,
