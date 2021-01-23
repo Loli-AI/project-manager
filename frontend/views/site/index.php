@@ -116,7 +116,7 @@
           <div class="font-weight-bold mt-4">
             <i class="fas fa-chart-line"></i>&nbsp;&nbsp;Komentar
             <form onsubmit="addComment(event)">
-              <input type="text" class="form-control mt-2" id="comment_input" autocomplete="off" placeholder="Ketikkan Komentar" />
+              <input required type="text" class="form-control mt-2" id="comment_input" autocomplete="off" placeholder="Ketikkan Komentar" />
               <button data-id="comment_button" type="submit" class="btn btn-dark btn-sm mt-2"><i class="fas fa-plus"></i>&nbsp;&nbsp;Tambah Komentar</button>
             </form>
           </div>
