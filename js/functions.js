@@ -1,6 +1,5 @@
 let editCardToggle = 1;
 let editCardData = "";
-const domain = "/project-manager" || "";
 
 function load(data) {
     if (data == "1") {

@@ -119,6 +119,9 @@ function editDataCard(e) {
         contentType: false,
         success: function (data) {
             editCard();
+            $("#card_desc_input").summernote('destroy');
+            $("#card_desc_input").hide();
+            editCardToggle = 1;
             refreshCard($("#submit_card_desc").attr("data-id"));
         }
     });
@@ -136,6 +139,7 @@ function getCards(id, dom, setting, list_id) {
         contentType: false,
         success: function (data) {
             let hr = document.createElement("hr");
+            hr.setAttribute("id", data.response.allCard[0].id);
             let date = document.createElement("small");
             date.setAttribute('class', 'text-muted');
             date.setAttribute('id', data.response.allCard[0].id);

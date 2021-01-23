@@ -25,6 +25,9 @@ $mainUrl = "/" . $url[1];
     <title><?= Html::encode($this->title) ?></title>
     <?= Html::csrfMetaTags() ?>
     <?php $this->head() ?>
+    <script type="text/javascript">
+        var domain = "<?= $mainUrl; ?>" || "";
+    </script>
 </head>
 <body style="background-color:#E5E7EB">
 
