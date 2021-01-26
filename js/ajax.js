@@ -81,11 +81,13 @@ function getComments(id, cont) {
 }
 
 function addComment(e) {
+    $('.note-editable img').addClass('img-fluid img-description hover-pointer rounded');
+    $('.note-editable img').attr('onclick', 'displayImgModal(event)');
     $("#card").modal("hide");
     load(1);
     e.preventDefault();
     let formData = new FormData;
-    formData.append("data", $("#comment_input").val());
+    formData.append("data", $("#comment_input").summernote('code'));
     formData.append("id", $("#submit_card_desc").attr("data-id"));
 
     $.ajax({
@@ -95,7 +97,7 @@ function addComment(e) {
         processData: false,
         contentType: false,
         success: function (data) {
-            $("#comment_input").val("");
+            $("#comment_input").summernote('code', '')
             load(0);
             refreshCard(e.submitter.id);
         }
@@ -175,8 +177,7 @@ function checkCard(id) {
         processData: false,
         contentType: false,
         success: function (data) {
-            console.log(data.name);
-            mess("alert-success", `Topik <strong>${data.name}</strong> Telah Diceklis`);
+            mess("alert-success", data.output);
             load(0);
             async function erase() {
                 $("#lists").html("");
@@ -238,6 +239,50 @@ function addCard(e) {
 
 function refreshCard(id) {
     load(1);
+    $("#comment_input").summernote({
+        codeviewFilter: false,
+        codeviewIframeFilter: true,
+        dialogsInBody: true,
+        disableDragAndDrop: true,
+        dialogsFade: true,
+        height : 200,
+        placeholder: 'Tambahkan Komentar',
+          toolbar: [
+            ['font', ['bold', 'underline', 'italic']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol']],
+            ['insert', ['link', 'picture']],
+          ],
+        callbacks: {
+          onImageUpload : function(files, editor, welEditable) {
+               for(var i = files.length - 1; i >= 0; i--) {
+                  sendFile(files[i], this);
+              }
+          }
+        }
+    });
+
+    $('.note-modal').on('hidden.bs.modal', function () {
+        $('#card').modal('hide');
+        $('#card').modal('show');
+    });
+
+    function sendFile(file, el) {
+      var form_data = new FormData();
+      form_data.append('file', file);
+      $.ajax({
+          data: form_data,
+          type: "POST",
+          url: domain+'/action/upload-image',
+          cache: false,
+          contentType: false,
+          processData: false,
+          success: function(url) {
+              $(el).summernote('pasteHTML', '<img src="'+domain+url+'" />');
+          }
+      });
+    }
+
     let formData = new FormData;
     formData.append("id", id);
     $.ajax({

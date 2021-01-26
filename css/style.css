@@ -5,6 +5,10 @@
     padding-top: 20px;
 }
 
+#comments > .card {
+    overflow: hidden;
+}
+
 .checked:hover {
     transform: scale(1.4);
     outline: none;
@@ -36,9 +40,9 @@
     filter: brightness(50%);
 }
 
-#imgModal {
+/*#imgModal {
     transform: scale(1.3);
-}
+}*/
 
 .no-click:focus {
     outline: none;

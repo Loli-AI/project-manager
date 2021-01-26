@@ -89,12 +89,14 @@ class ActionController extends Controller
 
             if ($card->is_done == 1) {
                 $card->is_done = 0;
+                $output = "Topik <strong>" . $name . " </strong> Telah Batal Diceklis";
             } else {
                 $card->is_done = 1;
+                $output = "Topik <strong>" . $name . " </strong> Telah Diceklis";
             }
             $card->save();
             
-            return ['name' => $name];
+            return ['output' => $output];
         }
         $this->redirect('/site/error');
     }

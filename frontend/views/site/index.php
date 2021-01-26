@@ -113,10 +113,12 @@
             </div>
           </div>
 
-          <div class="font-weight-bold mt-4">
-            <i class="fas fa-chart-line"></i>&nbsp;&nbsp;Komentar
+          <div class="mt-4">
+            <span class="font-weight-bold">
+              <i class="fas fa-chart-line"></i>&nbsp;&nbsp;Komentar
+            </span>
             <form onsubmit="addComment(event)">
-              <input required type="text" class="form-control mt-2" id="comment_input" autocomplete="off" placeholder="Ketikkan Komentar" />
+              <textarea id="comment_input"></textarea>
               <button data-id="comment_button" type="submit" class="btn btn-dark btn-sm mt-2"><i class="fas fa-plus"></i>&nbsp;&nbsp;Tambah Komentar</button>
             </form>
           </div>
@@ -178,10 +180,8 @@
   </div>
 </div>
 
-<div class="modal fade" id="imgModalDisplay" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <center>
-      <img id="imgModal">
-    </center>
+<div class="modal fade pt-3" id="imgModalDisplay" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <img class="mx-auto d-block" style="max-width: 100%;max-height: 100%;" id="imgModal">
   </div>
 </div>
