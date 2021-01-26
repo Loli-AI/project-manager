@@ -10,6 +10,7 @@ use common\widgets\Alert;
 AppAsset::register($this);
 
 $url = explode("/", Yii::$app->request->url);
+$path = Yii::$app->request->url;
 $mainUrl = "/" . $url[1];
 
 ?>
@@ -28,6 +29,7 @@ $mainUrl = "/" . $url[1];
     <?php $this->head() ?>
     <script type="text/javascript">
         var domain = "<?= $mainUrl; ?>" || "";
+        var path = "<?= $path; ?>" || "";
     </script>
 </head>
 <body style="background-color:#E5E7EB">

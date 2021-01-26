@@ -11,6 +11,7 @@ use frontend\assets\AppAsset;
 use common\widgets\Alert;
 
 $url = explode("/", Yii::$app->request->url);
+$path = Yii::$app->request->url;
 $mainUrl = "/" . $url[1];
 
 AppAsset::register($this);
@@ -23,6 +24,10 @@ AppAsset::register($this);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="<?= $mainUrl; ?>/favicon.ico" sizes="16x16" type="image/png">
+    <script type="text/javascript">
+        var domain = "<?= $mainUrl; ?>" || "";
+        var path = "<?= $path; ?>" || "";
+    </script>
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>

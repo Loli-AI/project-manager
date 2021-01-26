@@ -142,6 +142,7 @@ function getCards(id, dom, setting, list_id, checkbox) {
         success: function (data) {
             if (data.response.allCard[0].is_done == 1) {
                 checkbox.setAttribute("checked", "true");
+                checkbox.setAttribute("class", "form-check-input");
                 dom.setAttribute("style", "text-decoration:line-through;background-color:#E5E7EB;");
             }
             checkbox.setAttribute("onchange", "checkCard("+data.response.allCard[0].id+")");

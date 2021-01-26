@@ -12,6 +12,7 @@ use yii\filters\AccessControl;
 use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\Lists;
+use common\models\User;
 use frontend\models\Cards;
 use frontend\models\Comments;
 use frontend\models\ResetPasswordForm;
@@ -86,7 +87,8 @@ class SiteController extends Controller
     public function actionAccount()
     {
         Yii::$app->name = "Akun";
-        return $this->render('account');
+        $user = User::findIdentity(Yii::$app->user->identity->id);
+        return $this->render('account', ['user' => $user]);
     }
 
     public function actionLogin()
