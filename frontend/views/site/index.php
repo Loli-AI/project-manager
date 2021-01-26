@@ -6,12 +6,12 @@
 ?>
 
 <div class="container my-5">
-      <h1 class="mb-5 text-center">~ <span id="titlePage"><?= Yii::$app->name; ?></span> ~</h1>
+      <h1 class="mb-5 text-center">~ <span id="titlePage">Halaman Utama</span> ~</h1>
       <hr>
       <div class="row" id="lists">
-        <center class="text-muted w-100">
+        <!-- <center class="text-muted w-100">
           Jika Tidak Ada Daftar Project, Maka Kemungkinan Admin Belum Memberikan Akses Kepada Anda
-        </center>
+        </center> -->
       </div>
 </div>
 

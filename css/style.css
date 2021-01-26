@@ -5,6 +5,11 @@
     padding-top: 20px;
 }
 
+.checked:hover {
+    transform: scale(1.4);
+    outline: none;
+}
+
 .dragItem {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
     padding: 6px;

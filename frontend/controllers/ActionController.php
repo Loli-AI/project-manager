@@ -28,7 +28,7 @@ class ActionController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['add-list', 'add-comment', 'add-card', 'get-lists', 'get-cards', 'get-card-data', 'get-comment', 'edit-card', 'delete-list', 'delete-card', 'move-card', 'edit-card-title', 'edit-list-title', 'get-projects'],
+                'only' => ['add-list', 'add-comment', 'add-card', 'get-lists', 'get-cards', 'get-card-data', 'get-comment', 'edit-card', 'delete-list', 'delete-card', 'move-card', 'edit-card-title', 'edit-list-title', 'get-projects', 'check-card'],
                 'rules' => [
                     [
                         'actions' => [],
@@ -36,7 +36,7 @@ class ActionController extends Controller
                         'roles' => ['?'],
                     ],
                     [
-                        'actions' => ['add-list', 'add-comment', 'add-card', 'get-lists', 'get-cards', 'get-card-data', 'get-comment', 'edit-card', 'delete-list', 'delete-card', 'move-card', 'edit-card-title', 'edit-list-title', 'get-projects'],
+                        'actions' => ['add-list', 'add-comment', 'add-card', 'get-lists', 'get-cards', 'get-card-data', 'get-comment', 'edit-card', 'delete-list', 'delete-card', 'move-card', 'edit-card-title', 'edit-list-title', 'get-projects', 'check-card'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -56,6 +56,7 @@ class ActionController extends Controller
                     'delete-list' => ['post'],
                     'delete-card' => ['post'],
                     'move-card' => ['post'],
+                    'check-card' => ['post'],
                 ],
             ],
         ];
@@ -75,6 +76,27 @@ class ActionController extends Controller
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
+    }
+
+    public function actionCheckCard()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $req = Yii::$app->request;
+
+        if ($req->isAjax) {
+            $card = Cards::find()->where(['id' => $req->post('id')])->one();
+            $name = $card->title;
+
+            if ($card->is_done == 1) {
+                $card->is_done = 0;
+            } else {
+                $card->is_done = 1;
+            }
+            $card->save();
+            
+            return ['name' => $name];
+        }
+        $this->redirect('/site/error');
     }
 
     public function actionGetComment()
@@ -166,6 +188,7 @@ class ActionController extends Controller
             $datas = array(
                 "id" => $cards["id"],
                 "title" => $cards["title"],
+                "is_done" => $cards["is_done"],
                 "date" => $cards["date"],
             );
             array_push($allCard, $datas);
@@ -382,8 +405,20 @@ class ActionController extends Controller
         
         if ($req->isAjax) {
             $id = Yii::$app->user->identity->id;
-            $projects = Projects::find()->where(['is_master' => 1])->all();
             $name = [];
+
+            $valid = User::find()->where(['id' => $id])->one();
+            if ($valid->role == 1) {
+                $projects = Projects::find()->all();
+                foreach ($projects as $key) {
+                    array_push($name, $key->name);
+                }
+                return [
+                    'projects' => $name
+                ];
+            }
+
+            $projects = Projects::find()->where(['is_master' => 1])->all();
             $relations = [];
 
             foreach ($projects as $value) {
@@ -416,10 +451,41 @@ class ActionController extends Controller
         $id = Yii::$app->user->identity->id;
 
         if ($req->isAjax) {
+
+            $valid = User::find()->where(['id' => $id])->one();
+
             if ($req->post("data") != "") {
                 $data = $req->post("data");
             } else {
                 $data = Yii::$app->session->get('project');
+            }
+
+
+            if ($valid->role == 1) {
+
+                $project = Projects::find()->where(['name' => $data])->one();
+                $id_list = explode("|", $project->id_list);
+                array_pop($id_list);
+
+                $allList = [];
+
+                foreach ($id_list as $value) {
+                    $list = Lists::find()->where(["id" => $value])->one();
+                    $datas = array(
+                        'id' => $list['id'],
+                        'title' => $list['title'],
+                        'id_card' => $list['id_card'],
+                        'id_user' => $list['id_user'],
+                        'date' => $list['date'],
+                    );
+                    array_push($allList, $datas);
+                }
+
+                Yii::$app->session->set('project', $data);
+                return [
+                    'response' => array('allList' => $allList),
+                    'title' => $data
+                ];
             }
 
             $projects = Projects::find()->where(['is_master' => 1])->all();

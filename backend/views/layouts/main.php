@@ -8,6 +8,8 @@ use yii\widgets\Breadcrumbs;
 use common\widgets\Alert;
 use yii\helpers\Html;
 
+$url = explode("/", Yii::$app->request->url);
+$mainUrl = "/" . $url[1];
 
 AppAsset::register($this);
 ?>
@@ -20,6 +22,7 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <link rel="icon" href="<?= $mainUrl; ?>/favicon.ico" sizes="16x16" type="image/png">
     <?php $this->head() ?>
 </head>
 <body style="background-color:#F3F4F6">
@@ -27,12 +30,6 @@ AppAsset::register($this);
 
     <?= $this->render("_header"); ?>
     <div class="container pt-3">
-        <?php
-        // echo 
-        // Breadcrumbs::widget([
-            // 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        // ]) 
-        ?>
         <?= Alert::widget() ?>
         <?= $content ?>
     </div>

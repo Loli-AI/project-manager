@@ -10,6 +10,9 @@ use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
 
+$url = explode("/", Yii::$app->request->url);
+$mainUrl = "/" . $url[1];
+
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -19,6 +22,7 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="<?= $mainUrl; ?>/favicon.ico" sizes="16x16" type="image/png">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>

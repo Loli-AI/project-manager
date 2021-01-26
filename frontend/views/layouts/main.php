@@ -13,6 +13,7 @@ $url = explode("/", Yii::$app->request->url);
 $mainUrl = "/" . $url[1];
 
 ?>
+
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">

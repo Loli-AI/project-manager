@@ -9,7 +9,7 @@ $mainUrl = "/" . $url[1];
 $domain = $mainUrl;
 
     NavBar::begin([
-        'brandLabel' => '<i class="fas fa-mug-hot"></i>&nbsp;&nbsp;'.Yii::$app->name,
+        'brandLabel' => '<i class="fas fa-mug-hot"></i>&nbsp;&nbsp;App',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'shadow navbar-expand-lg navbar-light bg-light'
@@ -19,7 +19,7 @@ $domain = $mainUrl;
     <?php if (!Yii::$app->user->isGuest) : ?>
         <?php if ((Yii::$app->request->url == $domain . "/") || (Yii::$app->request->url == $domain . "/site/index") || (Yii::$app->request->url == $domain . "/site/") || (Yii::$app->request->url == $domain . "/site") || (Yii::$app->request->url == $domain . "/site/index/")) : ?>
                 <form onsubmit="searchProjects(event)" style="width:30%" class="mb-3 mt-3">
-                    <div class="position-relative" data-placement="bottom" id="searchProjects" data-toggle="popover" data-html="true" data-content="<strong>Lihat Daftar Projek Disini</strong>">
+                    <div class="position-relative" data-placement="bottom" id="searchProjects" data-toggle="popover" data-html="true" data-content="">
                         <abbr title="Cari Projek">
                             <button type="submit" class="btn btn-dark position-absolute" style="right:0"><i class="fas fa-search"></i></button>
                         </abbr>

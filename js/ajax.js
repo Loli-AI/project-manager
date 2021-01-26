@@ -127,7 +127,7 @@ function editDataCard(e) {
     });
 }
 
-function getCards(id, dom, setting, list_id) {
+function getCards(id, dom, setting, list_id, checkbox) {
     let formData = new FormData;
     formData.append("id", id);
     load(1);
@@ -138,6 +138,15 @@ function getCards(id, dom, setting, list_id) {
         processData: false,
         contentType: false,
         success: function (data) {
+            if (data.response.allCard[0].is_done == 1) {
+                checkbox.setAttribute("checked", "true");
+                dom.setAttribute("style", "text-decoration:line-through;background-color:#E5E7EB;");
+            }
+            checkbox.setAttribute("onchange", "checkCard("+data.response.allCard[0].id+")");
+            checkbox.setAttribute("class", "position-absolute btn checked");
+            checkbox.setAttribute("style", "right:5px;bottom:5px;");
+            checkbox.setAttribute("value", "1");
+
             let hr = document.createElement("hr");
             hr.setAttribute("id", data.response.allCard[0].id);
             let date = document.createElement("small");
@@ -152,6 +161,27 @@ function getCards(id, dom, setting, list_id) {
             dom.appendChild(hr);
             hr.appendChild(date);
             load(0);
+        }
+    });
+}
+
+function checkCard(id) {
+    let formData = new FormData;
+    formData.append("id", id);
+    $.ajax({
+        url: domain+'/action/check-card',
+        type: 'post',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (data) {
+            console.log(data.name);
+            mess("alert-success", `Topik <strong>${data.name}</strong> Telah Diceklis`);
+            load(0);
+            async function erase() {
+                $("#lists").html("");
+            }
+            erase().then(getLists());
         }
     });
 }
@@ -315,6 +345,7 @@ function getProjects(id) {
                 option.setAttribute("value", project);
                 document.querySelector("#projects").appendChild(option);
             });
+            $('#searchProjects').data('content', `<strong>Ditemukan Total ${data.projects.length} Projek</strong>`);
             $('#searchProjects').popover('show');
         }
     });
@@ -404,6 +435,9 @@ function getLists() {
                     card_container.setAttribute('id', list["id"]);
                     card_container.setAttribute('style', 'position:relative');
 
+                    let check = document.createElement("input");
+                    check.setAttribute("type", "checkbox");
+
                     let setting = document.createElement("i");
                     setting.setAttribute('class', 'fas fa-edit no-click btn-sm btn-dark p-2 edit-card');
                     setting.setAttribute('id', list["id"]);
@@ -413,10 +447,11 @@ function getLists() {
                     setting.dataset.html = 'true';
                     setting.dataset.trigger = 'focus';
 
-                    getCards(card, drag_item, setting, list["id"]);
+                    getCards(card, drag_item, setting, list["id"], check);
                     card_body.appendChild(card_container);
                     card_container.appendChild(setting);
                     card_container.appendChild(drag_item);
+                    card_container.appendChild(check);
                 });
 
                 // Cards
@@ -508,11 +543,13 @@ function getLists() {
                 element = e.srcElement;
                 lastElement = e.srcElement.parentElement;
                 $('.edit-card').hide();
+                $('.checked').hide();
             }
 
             function dragEnd() {
                 this.className = "dragItem";
                 $('.edit-card').show();
+                $('.checked').show();
             }
 
             function dragOver(e) {
@@ -532,6 +569,7 @@ function getLists() {
 
             function drop(e) {
                 $('.edit-card').show();
+                $('.checked').show();
                 this.className = "card-body";
                 let list = this;
                 let formData = new FormData;
@@ -645,6 +683,9 @@ function searchProjects(e) {
                     card_container.setAttribute('id', list["id"]);
                     card_container.setAttribute('style', 'position:relative');
 
+                    let check = document.createElement("input");
+                    check.setAttribute("type", "checkbox");
+
                     let setting = document.createElement("i");
                     setting.setAttribute('class', 'fas fa-edit no-click btn-sm btn-dark p-2 edit-card');
                     setting.setAttribute('id', list["id"]);
@@ -654,10 +695,11 @@ function searchProjects(e) {
                     setting.dataset.html = 'true';
                     setting.dataset.trigger = 'focus';
 
-                    getCards(card, drag_item, setting, list["id"]);
+                    getCards(card, drag_item, setting, list["id"], check);
                     card_body.appendChild(card_container);
                     card_container.appendChild(setting);
                     card_container.appendChild(drag_item);
+                    card_container.appendChild(check);
                 });
 
                 // Cards
@@ -749,11 +791,13 @@ function searchProjects(e) {
                 element = e.srcElement;
                 lastElement = e.srcElement.parentElement;
                 $('.edit-card').hide();
+                $('.checked').hide();
             }
 
             function dragEnd() {
                 this.className = "dragItem";
                 $('.edit-card').show();
+                $('.checked').show();
             }
 
             function dragOver(e) {
@@ -773,6 +817,7 @@ function searchProjects(e) {
 
             function drop(e) {
                 $('.edit-card').show();
+                $('.checked').show();
                 this.className = "card-body";
                 let list = this;
                 let formData = new FormData;
