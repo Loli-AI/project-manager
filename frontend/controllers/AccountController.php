@@ -94,7 +94,7 @@ class AccountController extends Controller
                     return $this->redirect(['site/account', ['user' => $user]]);
                 }
                 $dataUser->setPassword(Yii::$app->request->post('new_password_repeat'));
-                // $dataUser->save();
+                $dataUser->save();
                 Yii::$app->session->addFlash("success", "Password Telah Diubah");
 
             } else {
@@ -113,34 +113,25 @@ class AccountController extends Controller
         return $this->redirect(['site/account', ['user' => $user]]);
     }
 
-    public function actionEditUsername()
+    public function actionEditUsername() 
     {
         Yii::$app->name = "Akun";
         $dataUser = User::findIdentity(Yii::$app->user->identity->id);
 
-
-        if (Yii::$app->request->post('new_password_repeat') == Yii::$app->request->post('new_password')) {
-
-            if ($dataUser->validatePassword(Yii::$app->request->post('old_password'))) {
-
-                $dataUser->setPassword(Yii::$app->request->post('new_password_repeat'));
-                $dataUser->save();
-                Yii::$app->session->addFlash("success", "Password Telah Diubah");
-
+        if ($dataUser->validatePassword(Yii::$app->request->post('old_password'))) {
+            if (User::find(['name'])->where(['username' => Yii::$app->request->post('username')])->one()) {
+                Yii::$app->session->addFlash("danger", "Nama Telah Dipakai");
             } else {
-
-                Yii::$app->session->addFlash("danger", "Password Lama Salah");
-
+                $dataUser->username = Yii::$app->request->post('username');
+                $dataUser->save();
+                Yii::$app->session->addFlash("success", "Username Telah Diubah");
             }
-
         } else {
-
-            Yii::$app->session->addFlash("danger", "Password Tidak Cocok");
-
+            Yii::$app->session->addFlash("danger", "Password Salah");
         }
         
         $user = User::findIdentity(Yii::$app->user->identity->id);
-        return $this->render('/site/account', ['user' => $user]);
+        return $this->redirect(['site/account', ['user' => $user]]);
     }
 
 }
