@@ -12,7 +12,7 @@ $domain = $mainUrl;
         'brandLabel' => '<i class="fas fa-mug-hot"></i>&nbsp;&nbsp;App',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'shadow navbar-expand-lg navbar-light bg-light'
+            'class' => 'shadow navbar-expand-lg navbar-light bg-light sticky-top'
         ],
     ]);
     ?>
@@ -33,8 +33,8 @@ $domain = $mainUrl;
     <?php
     
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => '<i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;Daftar', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => '<i class="fas fa-user"></i>&nbsp;&nbsp;Masuk', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => '<i class="fas fa-user"></i>&nbsp;&nbsp;Daftar', 'url' => ['/site/signup']];
+        $menuItems[] = ['label' => '<i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;Masuk', 'url' => ['/site/login']];
     } else {
         $menuItems[] = ['label' => '<i class="fas fa-clipboard-list"></i>&nbsp;&nbsp;Projek', 'url' => ['/site/index']];
         $menuItems[] = ['label' => '<i class="fas fa-tools"></i>&nbsp;&nbsp;Akun', 'url' => ['/site/account']];

@@ -38,6 +38,7 @@ AppAsset::register($this);
 <div class="wrap">
     
     <?= $this->render("_header.php"); ?>
+    <div class="position-fixed bg-light top-0 w-100 h-100" style="background-image: url(<?=$mainUrl;?>/img/wallpaper.png);background-size: 100%; background-repeat: no-repeat;"></div>
     <br>
     <div class="container">
         

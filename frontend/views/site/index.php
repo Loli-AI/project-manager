@@ -5,7 +5,7 @@
   $this->title = Yii::$app->name;
 ?>
 
-<div class="container my-5">
+<div class="container my-5 position-relative">
       <h1 class="mb-5 text-center">~ <span id="titlePage">Halaman Utama</span> ~</h1>
       <hr>
       <div class="row" id="lists">
@@ -14,7 +14,6 @@
         </center> -->
       </div>
 </div>
-
 <button type="button" class="btn btn-primary" data-toggle="modal" id="loadButton" data-target="#load">&nbsp;</button>
 
 <!-- Modal Loader -->
