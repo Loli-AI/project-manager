@@ -655,6 +655,11 @@ function searchProjects(e) {
         processData: false,
         contentType: false,
         success: (data) => {
+            if (!data.response) {
+                mess("alert-danger", `Projek <strong>${data.title}</strong> Tidak Ditemukan`);
+                load(0);
+                return false;
+            }
             let allList = data.response.allList;
             $("#lists").html("");
             $("#titlePage").html(data.title);
@@ -885,6 +890,11 @@ function searchProjects(e) {
                 });
             }
             load(0);
+        },
+        error : (data) => {
+            mess("alert-danger", `Projek <strong>${$("#search").val()}</strong> Tidak Ditemukan`);
+            load(0);
+            return false;
         }
     });
 }

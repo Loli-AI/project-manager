@@ -26,7 +26,7 @@ $this->title = 'Masuk';
                             <?= $form->field($model, 'rememberMe')->checkbox()->label('Ingat Saya') ?>
 
                             <div class="form-group">
-                                <?= Html::submitButton('<i class="fas fa-door-open"></i>&nbsp;&nbsp;Masuk', ['class' => 'btn btn-primary btn-block', 'name' => 'login-button']) ?>
+                                <?= Html::submitButton('<i class="fas fa-door-open"></i>&nbsp;&nbsp;Masuk', ['class' => 'btn btn-dark btn-block', 'name' => 'login-button']) ?>
                             </div>
 
                         <?php ActiveForm::end(); ?>

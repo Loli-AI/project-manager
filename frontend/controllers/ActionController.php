@@ -454,14 +454,21 @@ class ActionController extends Controller
 
         if ($req->isAjax) {
 
-            $valid = User::find()->where(['id' => $id])->one();
-
             if ($req->post("data") != "") {
                 $data = $req->post("data");
             } else {
                 $data = Yii::$app->session->get('project');
             }
 
+            $check = Projects::find()->where(['name' => $data])->one();
+            if (!$check) {
+                return [
+                    'response' => false,
+                    'title' => $data
+                ];
+            }
+
+            $valid = User::find()->where(['id' => $id])->one();
 
             if ($valid->role == 1) {
 
