@@ -22,6 +22,12 @@
     <link rel="stylesheet" href="<?= $mainUrl;   ?>/webassets/fa/css/all.min.css" />
     <link rel="stylesheet" href="<?= $mainUrl;   ?>/webassets/styles.css" />
     <script type="text/javascript" src="<?= $mainUrl;  ?>/webassets/jquery.js"></script>
+    <style type="text/css">
+      @keyframes push {
+        from{transform: scale(.8);}
+        to{transform: scale(1);}
+      }
+    </style>
   </head>
   <body class="text-gray-800 antialiased">
 
@@ -989,8 +995,8 @@
           </a>
         </div>
       </div>
-      <div class="button w-5 text-center bg-red-600 text-white rounded-full fixed" style="right: 45px;bottom: 85px;cursor: pointer;z-index: 1">1</div>
-      <img id="wa" src="<?= $mainUrl;  ?>/webassets/img/wa.svg" class="fixed" style="right: 45px;bottom: 45px;width: 65px;cursor: pointer">
+        <div class="button w-5 text-center bg-red-600 text-white rounded-full fixed" style="right: 45px;bottom: 85px;cursor: pointer;z-index: 1;animation: push 2s infinite alternate linear">1</div>
+        <img id="wa" src="<?= $mainUrl;  ?>/webassets/img/wa.svg" class="fixed" style="right: 45px;bottom: 45px;width: 65px;cursor: pointer;animation: push 2s infinite alternate linear">
     </div>
 
     <footer class="bg-gray-300 pt-8 pb-6">
