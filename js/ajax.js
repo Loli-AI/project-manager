@@ -889,6 +889,7 @@ function searchProjects(e) {
                     }
                 });
             }
+            $("#search").val("");
             load(0);
         },
         error : (data) => {

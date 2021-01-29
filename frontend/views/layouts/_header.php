@@ -17,7 +17,7 @@ $domain = $mainUrl;
     ]);
     ?>
     <?php if (!Yii::$app->user->isGuest) : ?>
-        <?php if ((Yii::$app->request->url == $domain . "/") || (Yii::$app->request->url == $domain . "/site/index") || (Yii::$app->request->url == $domain . "/site/") || (Yii::$app->request->url == $domain . "/site") || (Yii::$app->request->url == $domain . "/site/index/")) : ?>
+        <?php if ((Yii::$app->request->url == $domain . "/site/forum") || (Yii::$app->request->url == $domain . "/site/forum/")) : ?>
                 <form onsubmit="searchProjects(event)" style="width:30%" class="mb-3 mt-3">
                     <div class="position-relative" data-placement="bottom" id="searchProjects" data-toggle="popover" data-html="true" data-content="">
                         <abbr title="Cari Projek">
@@ -36,7 +36,7 @@ $domain = $mainUrl;
         $menuItems[] = ['label' => '<i class="fas fa-user"></i>&nbsp;&nbsp;Daftar', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => '<i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;Masuk', 'url' => ['/site/login']];
     } else {
-        $menuItems[] = ['label' => '<i class="fas fa-clipboard-list"></i>&nbsp;&nbsp;Projek', 'url' => ['/site/index']];
+        $menuItems[] = ['label' => '<i class="fas fa-clipboard-list"></i>&nbsp;&nbsp;Projek', 'url' => ['/site/forum']];
         $menuItems[] = ['label' => '<i class="fas fa-tools"></i>&nbsp;&nbsp;Akun', 'url' => ['/site/account']];
 
         $menuItems[] = [

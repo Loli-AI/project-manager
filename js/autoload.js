@@ -1,6 +1,6 @@
 $(document).ready(() => {
 
-    if (path == '/project-manager' || path == '/project-manager/' || path == '/project-manager/site' || path == '/project-manager/site/' || path == '/project-manager/site/index' || path == '/project-manager/site/index/') {
+    if (path == '/rangkai/site/forum' || path == '/rangkai/site/forum/') {
       getProjects();
     }
 

@@ -23,7 +23,7 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="<?= $mainUrl; ?>/favicon.ico" sizes="16x16" type="image/png">
+    <link rel="icon" href="<?= $mainUrl; ?>/favicon.png" sizes="16x16" type="image/png">
     <script type="text/javascript">
         var domain = "<?= $mainUrl; ?>" || "";
         var path = "<?= $path; ?>" || "";

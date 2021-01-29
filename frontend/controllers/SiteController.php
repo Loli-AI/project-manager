@@ -34,7 +34,7 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['login', 'signup', 'index', 'logout', 'account'],
+                'only' => ['login', 'signup', 'forum', 'logout', 'account'],
                 'rules' => [
                     [
                         'actions' => ['login', 'signup'],
@@ -42,7 +42,7 @@ class SiteController extends Controller
                         'roles' => ['?'],
                     ],
                     [
-                        'actions' => ['index', 'logout', 'account', 'login', 'signup'],
+                        'actions' => ['forum', 'logout', 'account', 'login', 'signup'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -80,7 +80,15 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        Yii::$app->name = "PT RANGKAI UTAMA BERJAYA";
+        $this->layout = 'blank';
+        return $this->render('web');
+    }
+
+    public function actionForum()
+    {
         Yii::$app->name = "Projek";
+        $this->layout = 'main';
         return $this->render('index');
     }
 
@@ -119,7 +127,7 @@ class SiteController extends Controller
     {
         Yii::$app->user->logout();
 
-        return $this->goHome();
+        return $this->redirect('login');
     }
 
     /**
