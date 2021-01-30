@@ -114,7 +114,7 @@
 
           <div class="mt-4">
             <span class="font-weight-bold">
-              <i class="fas fa-chart-line"></i>&nbsp;&nbsp;Komentar
+              <i id="comment" class="fas fa-chart-line"></i>&nbsp;&nbsp;Komentar
             </span>
             <form onsubmit="addComment(event)">
               <textarea id="comment_input"></textarea>

@@ -40,11 +40,6 @@ $(document).ready(() => {
       }
   });
 
-    $('.note-modal').on('hidden.bs.modal', function () {
-        $('#newCard').modal('hide');
-        $('#newCard').modal('show');
-    });
-
     function sendFile(file, el) {
       var form_data = new FormData();
       form_data.append('file', file);

@@ -5,6 +5,10 @@
     padding-top: 20px;
 }
 
+.modal {
+  overflow-y:auto;
+}
+
 #comments > .card {
     overflow: hidden;
 }
@@ -12,6 +16,14 @@
 .checked:hover {
     transform: scale(1.4);
     outline: none;
+}
+
+.replySection {
+    display: -webkit-box;!important;
+    overflow:hidden;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 5;
+    max-height: 115px;
 }
 
 .dragItem {
@@ -29,7 +41,6 @@
     display: -webkit-box;
    -webkit-box-orient: vertical;
    -webkit-line-clamp: 6;
-   overflow: hidden;
 }
 
 .img-description {

@@ -23,6 +23,7 @@ function editCard() {
         codeviewFilter: false,
         codeviewIframeFilter: true,
         dialogsInBody: true,
+        focus : true,
         disableDragAndDrop: true,
         dialogsFade: true,
         placeholder: 'Deskripsi',
@@ -40,11 +41,6 @@ function editCard() {
               }
           }
         }
-    });
-
-    $('.note-modal').on('hidden.bs.modal', function () {
-        $('#card').modal('hide');
-        $('#card').modal('show');
     });
 
     function sendFile(file, el) {
@@ -69,6 +65,7 @@ function editCard() {
         $("#card_desc_input").summernote('destroy');
         $("#card_desc_input").hide();
         editCardToggle = 1;
+        console.log('jkl');    
     }
     
 
@@ -90,3 +87,7 @@ function displayImgModal(e) {
   $('#card').modal('toggle');
   $('#imgModalDisplay').modal('toggle');
 };
+
+function reply(id) {
+  $('#comment_input').summernote('code', $(`#${id}message`).html()+'<p><small><i class="text-muted text-sm" >Ketikkan Balasan...</i></small></p>');
+}

@@ -65,7 +65,35 @@ function getComments(id, cont) {
             name.setAttribute("class", "font-weight-bold");
             name.innerHTML = data.response.comment_data.user;
 
+            let icon_reply = document.createElement("i");
+            icon_reply.setAttribute('class', 'fas fa-share');
+            icon_reply.innerHTML = '&nbsp;Balas';
+
+            let reply_small = document.createElement("small");
+            
+            let reply = document.createElement("a");
+            reply.setAttribute('class', 'mr-1 position-absolute text-primary');
+            reply.setAttribute('id', data.response.comment_data.id);
+            reply.setAttribute('onclick', 'reply(this.id)');
+            reply.setAttribute('href', '#comment');
+            reply.setAttribute('style', 'left:10px;bottom:0;');
+
+            let reply_section = document.createElement("div");
+// <a class="btn my-2 text-left btn-light btn-sm card replySection" href="#34">
+//      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+//  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+//  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+//  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+//  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+//  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+//  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+//  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+//  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+//  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+//  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+//  </a>
             let message = document.createElement("div");
+            message.setAttribute('id', data.response.comment_data.id+'message');
             message.innerHTML = data.response.comment_data.message;
 
             let date = document.createElement("small");
@@ -73,9 +101,12 @@ function getComments(id, cont) {
             date.setAttribute("style", "right:0;bottom:0;");
             date.innerHTML = data.response.comment_data.date;
 
+            reply_small.append(icon_reply);
+            reply.append(reply_small);
             cont.appendChild(name);
             cont.appendChild(message);
             cont.appendChild(date);
+            cont.appendChild(reply);
         }
     });
 }
@@ -105,14 +136,14 @@ function addComment(e) {
 }
 
 function editDataCard(e) {
+    e.preventDefault();
     $('.note-editable img').addClass('img-fluid img-description hover-pointer rounded');
     $('.note-editable img').attr('onclick', 'displayImgModal(event)');
-    $("#card").modal("hide");
     load(1);
-    e.preventDefault();
     let formData = new FormData;
     formData.append("data", $("#card_desc_input").summernote('code'));
     formData.append("id", $("#submit_card_desc").attr("data-id"));
+    console.log($("#card_desc_input").summernote('code'));
     $.ajax({
         url: domain+'/action/edit-card-description',
         type: 'post',
@@ -120,6 +151,7 @@ function editDataCard(e) {
         processData: false,
         contentType: false,
         success: function (data) {
+            $("#card").modal("hide");
             editCard();
             $("#card_desc_input").summernote('destroy');
             $("#card_desc_input").hide();
@@ -260,11 +292,6 @@ function refreshCard(id) {
               }
           }
         }
-    });
-
-    $('.note-modal').on('hidden.bs.modal', function () {
-        $('#card').modal('hide');
-        $('#card').modal('show');
     });
 
     function sendFile(file, el) {
