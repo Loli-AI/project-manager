@@ -941,6 +941,8 @@ function searchProjects(e) {
 
 function addReply(e) {
     e.preventDefault();
+    $('.note-editable img').addClass('img-fluid img-description hover-pointer rounded');
+    $('.note-editable img').attr('onclick', 'displayImgModal(event)');
     load(1);
     let formData = new FormData;
     let id = $('#reply_id').val();

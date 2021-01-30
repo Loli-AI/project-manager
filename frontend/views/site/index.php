@@ -17,7 +17,7 @@
 <button type="button" class="btn btn-primary" data-toggle="modal" id="loadButton" data-target="#load">&nbsp;</button>
 
 <!-- Modal Loader -->
-<div class="modal fade" id="load" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal" id="load" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="spinner-grow text-primary" style="width:8rem;height:8rem;" role="status"></div>
     <div class="spinner-grow text-primary" style="width:8rem;height:8rem;" role="status"></div>
