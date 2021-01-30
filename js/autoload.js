@@ -13,6 +13,11 @@ $(document).ready(() => {
         $('#card').modal('toggle');
     });
 
+    $('#reply_modal').on('hidden.bs.modal', function () {
+        $('#card').modal('show');
+    });
+
+
     $('#imgModalDisplay').on('hidden.bs.modal', function () {
         $('#card').modal('toggle');
     });

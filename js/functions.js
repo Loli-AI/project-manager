@@ -64,8 +64,7 @@ function editCard() {
     } else {
         $("#card_desc_input").summernote('destroy');
         $("#card_desc_input").hide();
-        editCardToggle = 1;
-        console.log('jkl');    
+        editCardToggle = 1; 
     }
     
 
@@ -89,5 +88,62 @@ function displayImgModal(e) {
 };
 
 function reply(id) {
-  $('#comment_input').summernote('code', $(`#${id}message`).html()+'<p><small><i class="text-muted text-sm" >Ketikkan Balasan...</i></small></p>');
+  $('#name_comment').html($('#'+id+"name").html());
+  $('#name_comment').data('id', id);
+  $("#reply_input").summernote({
+        codeviewFilter: false,
+        codeviewIframeFilter: true,
+        dialogsInBody: true,
+        focus : true,
+        disableDragAndDrop: true,
+        dialogsFade: true,
+        placeholder: 'Ketikkan Balasan...',
+          height: 300,
+          toolbar: [
+            ['font', ['bold', 'underline', 'italic']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol']],
+            ['insert', ['link', 'picture']],
+          ],
+           callbacks: {
+          onImageUpload : function(files, editor, welEditable) {
+               for(var i = files.length - 1; i >= 0; i--) {
+                  sendFile(files[i], this);
+              }
+          }
+        }
+    });
+
+    function sendFile(file, el) {
+      var form_data = new FormData();
+      form_data.append('file', file);
+      $.ajax({
+          data: form_data,
+          type: "POST",
+          url: domain+'/action/upload-image',
+          cache: false,
+          contentType: false,
+          processData: false,
+          success: function(url) {
+              $(el).summernote('pasteHTML', '<img src="'+domain+url+'" />');
+          }
+      });
+    }
+    $('#card').modal('hide');
+    $('#reply_id').val(id);
+    $('#reply_modal').modal('show');
+}
+
+function push(id) {
+  setTimeout(() => {
+    $("#"+id).animate({left : '10px'}, 'fast', function () {
+     $(this).animate({left : '-10px'}, 'fast', function () {
+       $(this).animate({left : '10px'}, 'fast', function () {
+         $(this).animate({left : '-10px'}, 'fast', function () {
+           $(this).animate({left : '0'}, 'fast', )
+          })
+        })
+      })
+    });
+  }, 100);
 }

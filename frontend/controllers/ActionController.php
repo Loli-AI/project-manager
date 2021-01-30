@@ -48,6 +48,7 @@ class ActionController extends Controller
                     'add-list' => ['post'],
                     'add-comment' => ['post'],
                     'add-card' => ['post'],
+                    'add-reply' => ['post'],
                     'get-lists' => ['post'],
                     'get-cards' => ['post'],
                     'get-card-data' => ['post'],
@@ -76,6 +77,28 @@ class ActionController extends Controller
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
+    }
+
+    public function actionAddReply()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $req = Yii::$app->request;
+
+        if ($req->isAjax) {
+            $comment = new Comments();
+            $comment->message = $req->post("reply");
+            $comment->reply = $req->post("name") . "<@delimiter@>" . $req->post("message") . "<@delimiter@>" . $req->post('id');
+            $comment->id_user = Yii::$app->user->identity->id;
+            $comment->save();
+
+            $new_comment = Comments::find()->orderBy(['id' => SORT_DESC])->one();
+
+            $card = Cards::find()->where(['id' => $req->post('card')])->one();
+            $card->id_comment = $card->id_comment . $new_comment->id . "|";
+            $card->save();
+            return false;
+        }
+        $this->redirect('/site/error');
     }
 
     public function actionCheckCard()
@@ -113,6 +136,7 @@ class ActionController extends Controller
             $comment_data = array(
                     "id" => $comment["id"],
                     "message" => $comment["message"],
+                    "reply" => $comment["reply"],
                     "user" => $user['username'],
                     "date" => $comment["date"],
                 );

@@ -5,6 +5,10 @@
     padding-top: 20px;
 }
 
+.pushAnimation {
+    animation: push 2s linear ease-in-out;
+}
+
 .modal {
   overflow-y:auto;
 }
@@ -24,6 +28,7 @@
    -webkit-box-orient: vertical;
    -webkit-line-clamp: 5;
     max-height: 115px;
+    min-height: 15px!important;
 }
 
 .dragItem {

@@ -63,6 +63,7 @@ function getComments(id, cont) {
         success: function (data) {
             let name = document.createElement("div");
             name.setAttribute("class", "font-weight-bold");
+            name.setAttribute('id', data.response.comment_data.id+"name");
             name.innerHTML = data.response.comment_data.user;
 
             let icon_reply = document.createElement("i");
@@ -78,20 +79,8 @@ function getComments(id, cont) {
             reply.setAttribute('href', '#comment');
             reply.setAttribute('style', 'left:10px;bottom:0;');
 
-            let reply_section = document.createElement("div");
-// <a class="btn my-2 text-left btn-light btn-sm card replySection" href="#34">
-//      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-//  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-//  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-//  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-//  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-//  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-//  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-//  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-//  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-//  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-//  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-//  </a>
+            
+
             let message = document.createElement("div");
             message.setAttribute('id', data.response.comment_data.id+'message');
             message.innerHTML = data.response.comment_data.message;
@@ -104,9 +93,33 @@ function getComments(id, cont) {
             reply_small.append(icon_reply);
             reply.append(reply_small);
             cont.appendChild(name);
+
+            if(data.response.comment_data.reply != "") {
+                let reply_data = data.response.comment_data.reply.split("<@delimiter@>");
+
+                let reply_section = document.createElement("div");
+                let a_reply = document.createElement("a");
+                a_reply.setAttribute('class', 'btn my-2 text-left btn-light btn-sm card replySection');
+                a_reply.setAttribute('href', '#'+reply_data[2]);
+                a_reply.setAttribute('onclick', 'push('+reply_data[2]+')');
+
+                let reply_username = document.createElement("div");
+                reply_username.setAttribute('class', 'font-weight-bold');
+                reply_username.innerHTML = reply_data[0];
+
+                let reply_cont = document.createElement("div");
+                reply_cont.innerHTML = reply_data[1];
+                reply_section.append(a_reply);
+                a_reply.append(reply_username);
+                a_reply.append(reply_cont);
+                cont.appendChild(reply_section);
+            }
+
             cont.appendChild(message);
             cont.appendChild(date);
             cont.appendChild(reply);
+            cont.setAttribute('id', data.response.comment_data.id);
+
         }
     });
 }
@@ -143,7 +156,6 @@ function editDataCard(e) {
     let formData = new FormData;
     formData.append("data", $("#card_desc_input").summernote('code'));
     formData.append("id", $("#submit_card_desc").attr("data-id"));
-    console.log($("#card_desc_input").summernote('code'));
     $.ajax({
         url: domain+'/action/edit-card-description',
         type: 'post',
@@ -923,6 +935,31 @@ function searchProjects(e) {
             mess("alert-danger", `Projek <strong>${$("#search").val()}</strong> Tidak Ditemukan`);
             load(0);
             return false;
+        }
+    });
+}
+
+function addReply(e) {
+    e.preventDefault();
+    load(1);
+    let formData = new FormData;
+    let id = $('#reply_id').val();
+    formData.append('name', $('#'+id+"name").html());
+    formData.append('message', $('#'+id+"message").html());
+    formData.append('reply', $("#reply_input").summernote('code'));
+    formData.append('card', $("#submit_card_desc").attr("data-id"));
+    formData.append('id', id);
+
+    $.ajax({
+        url: domain+'/action/add-reply',
+        type: 'post',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (data) {
+            $("#reply_input").summernote('code', '');
+            $('#reply_modal').modal('hide');
+            refreshCard($("#submit_card_desc").attr("data-id"));
         }
     });
 }

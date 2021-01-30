@@ -17,7 +17,7 @@
 <button type="button" class="btn btn-primary" data-toggle="modal" id="loadButton" data-target="#load">&nbsp;</button>
 
 <!-- Modal Loader -->
-<div class="modal" id="load" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="load" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="spinner-grow text-primary" style="width:8rem;height:8rem;" role="status"></div>
     <div class="spinner-grow text-primary" style="width:8rem;height:8rem;" role="status"></div>
@@ -53,7 +53,7 @@
 </div>
 
 <!-- Modal New Card -->
-<div class="modal" id="newCard" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="newCard" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -82,7 +82,7 @@
 </div>
 
 <!-- Card Data Modal -->
-<div class="modal" id="card" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade" id="card" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
     <div class="modal-header">
@@ -182,5 +182,31 @@
 <div class="modal fade pt-3" id="imgModalDisplay" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
       <img class="mx-auto d-block" style="max-width: 100%;max-height: 100%;" id="imgModal">
+  </div>
+</div>
+
+<!-- List Title Modal -->
+<div class="modal fade" id="reply_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <strong>
+          Balas Komentar <span id="name_comment"></span>
+        </strong>
+        <abbr title="Tutup">
+          <div class="float-right mr-2 btn-sm btn-light btn text-muted" data-dismiss="modal"><i class="fas fa-times"></i></div>
+        </abbr>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="addReply(event)">
+          <input type="hidden" id="reply_id">
+        <textarea id="reply_input"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" data-dismiss="modal"><i class="fas fa-times"></i>&nbsp;&nbsp;Tutup</button>
+        <button type="submit" class="btn btn-dark"><i class="fas fa-share"></i>&nbsp;&nbsp;Balas</button>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
