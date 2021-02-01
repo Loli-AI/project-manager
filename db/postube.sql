@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 26, 2021 at 04:34 AM
+-- Generation Time: Feb 01, 2021 at 05:48 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -46,15 +46,18 @@ INSERT INTO `cards` (`id`, `title`, `description`, `is_done`, `id_comment`, `id_
 (3, 'Coca-Cola', '', 0, '', 15, '2021-01-13 13:25:41'),
 (4, 'Fanta', '', 0, '', 15, '2021-01-13 14:10:49'),
 (11, 'Sprite', '', 0, '', 15, '2021-01-13 16:40:24'),
-(21, 'Latte', '<p><span style=\"color: rgb(77, 81, 86); font-family: arial, sans-serif; font-size: 14px;\">Caffe&nbsp;</span><span style=\"font-weight: bold; color: rgb(95, 99, 104); font-family: arial, sans-serif; font-size: 14px;\">latte</span><span style=\"color: rgb(77, 81, 86); font-family: arial, sans-serif; font-size: 14px;\">&nbsp;(or simply&nbsp;</span><span style=\"font-weight: bold; color: rgb(95, 99, 104); font-family: arial, sans-serif; font-size: 14px;\">latte</span><span style=\"color: rgb(77, 81, 86); font-family: arial, sans-serif; font-size: 14px;\">) (/ˈlɑːteɪ/ or /ˈlæteɪ/) is a coffee drink made with espresso and steamed milk. The word comes from the Italian caffè e&nbsp;</span><span style=\"font-weight: bold; color: rgb(95, 99, 104); font-family: arial, sans-serif; font-size: 14px;\">latte</span><span style=\"color: rgb(77, 81, 86); font-family: arial, sans-serif; font-size: 14px;\">&nbsp;[kafˌfɛ e lˈlatte], caffelatte [kaffeˈlatte] or caffellatte [kaffelˈlatte], which means \"coffee &amp; milk\".</span></p><p><img onclick=\"displayImgModal(event)\" class=\"img-fluid img-description hover-pointer rounded\" src=\"/project-manager/img-uploads/1611263872.jpg\"><span style=\"color: rgb(77, 81, 86); font-family: arial, sans-serif; font-size: 14px;\"><br></span><br></p><p></p><p>These are the steps how to make a asimple latte coffee :&nbsp;<a href=\"https://www.wikihow.com/Make-a-Latte\" target=\"_blank\">How To Make A Latte</a></p>', 0, '25|26|', 15, '2021-01-15 04:55:46'),
+(21, 'Latte', '<p><img src=\"/rangkai/img-uploads/1612154780.gif\" class=\"img-fluid img-description hover-pointer rounded\" onclick=\"displayImgModal(event)\"><br></p>', 1, '25|26|38|39|40|', 15, '2021-01-15 04:55:46'),
 (23, 'Avocado Juice', '', 0, '5|23|', 15, '2021-01-15 14:51:06'),
-(27, 'Cappucino', '<p><br></p>', 1, '', 15, '2021-01-17 08:58:07'),
-(28, 'Watermelon', 'Taste So Sweet', 0, '24|', 15, '2021-01-18 10:07:27'),
+(27, 'Cappucino', '', 0, '', 15, '2021-01-17 08:58:07'),
+(28, 'Watermelon', '', 0, '24|', 15, '2021-01-18 10:07:27'),
 (29, 'Apple', '', 0, '', 15, '2021-01-18 11:09:28'),
 (30, 'Denmark', '', 0, '', 15, '2021-01-18 11:12:40'),
-(31, 'Starfruit', '<p><br></p>', 0, '', 15, '2021-01-21 03:33:44'),
-(35, 'Watermelon', '<p><b>Watermelon</b></p><p></p><p><img src=\"/project-manager/img-uploads/1611365921.jpg\" class=\"img-fluid img-description hover-pointer rounded\" onclick=\"displayImgModal(event)\"><br></p><p><b>Facts about watermelon</b></p><p><img src=\"https://images.unsplash.com/photo-1589984662646-e7b2e4962f18?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8d2F0ZXJtZWxvbnxlbnwwfHwwfA%3D%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60\" style=\"width: 500px;\" class=\"img-fluid img-description hover-pointer rounded\" onclick=\"displayImgModal(event)\"><br></p><p><span style=\"color: rgb(77, 81, 86); font-family: arial, sans-serif; font-size: 14px;\">Watermelon is a flowering plant species of the Cucurbitaceae family. A scrambling and trailing vine-like plant, it was originally domesticated in Africa. It is a highly cultivated fruit worldwide, with more than 1,000 varieties. Wild watermelon seeds have been found in the prehistoric Libyan site of Uan Muhuggiag</span><br></p>', 0, '28|', 15, '2021-01-23 00:43:34'),
-(37, 'Tomato', '<p><img src=\"/project-manager/img-uploads/1611366211.jpg\" class=\"img-fluid img-description hover-pointer rounded\" onclick=\"displayImgModal(event)\"></p><p><img style=\"width: 500px;\" src=\"https://images.unsplash.com/photo-1561136594-7f68413baa99?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8dG9tYXRvfGVufDB8fDB8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60\" class=\"img-fluid img-description hover-pointer rounded\" onclick=\"displayImgModal(event)\"><br></p>', 0, '', 15, '2021-01-23 01:43:42');
+(31, 'Starfruit', '', 1, '', 15, '2021-01-21 03:33:44'),
+(35, 'Watermelon', '', 0, '28|', 15, '2021-01-23 00:43:34'),
+(37, 'Tomato', '', 0, '', 15, '2021-01-23 01:43:42'),
+(43, 'Germany', '', 1, '', 18, '2021-01-30 06:14:47'),
+(44, 'United Kingdom', '', 0, '', 18, '2021-01-30 06:14:55'),
+(45, 'Korea', '', 1, '41|42|', 18, '2021-01-30 06:15:14');
 
 -- --------------------------------------------------------
 
@@ -65,6 +68,7 @@ INSERT INTO `cards` (`id`, `title`, `description`, `is_done`, `id_comment`, `id_
 CREATE TABLE `comments` (
   `id` int(11) NOT NULL,
   `message` text NOT NULL,
+  `reply` text NOT NULL,
   `id_user` int(11) DEFAULT NULL,
   `date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -73,14 +77,18 @@ CREATE TABLE `comments` (
 -- Dumping data for table `comments`
 --
 
-INSERT INTO `comments` (`id`, `message`, `id_user`, `date`) VALUES
-(5, 'Very Delicious', 15, '2021-01-15 13:10:22'),
-(23, 'I Prefer Pizza', 18, '2021-01-16 13:15:03'),
-(24, 'One Of Healthy Fruit', 15, '2021-01-18 10:09:18'),
-(25, 'Best Coffee', 15, '2021-01-18 11:14:04'),
-(26, 'Indeed', 18, '2021-01-18 11:15:27'),
-(28, 'I Like Apples!!!', 15, '2021-01-22 16:27:10'),
-(30, 'asd', 15, '2021-01-25 09:42:04');
+INSERT INTO `comments` (`id`, `message`, `reply`, `id_user`, `date`) VALUES
+(5, 'Very Delicious', '', 15, '2021-01-15 13:10:22'),
+(23, 'I Prefer Pizza', '', 18, '2021-01-16 13:15:03'),
+(24, 'One Of Healthy Fruit', '', 15, '2021-01-18 10:09:18'),
+(25, 'Best Coffee', '', 15, '2021-01-18 11:14:04'),
+(26, 'Indeed', '', 18, '2021-01-18 11:15:27'),
+(28, 'I Like Apples!!!', '', 15, '2021-01-22 16:27:10'),
+(38, '<p>No Pizza Allowed</p>', 'Pizza<@delimiter@>Indeed<@delimiter@>26', 18, '2021-01-30 08:35:02'),
+(39, '<p>Nice Taste</p>', 'Pasta<@delimiter@>Best Coffee<@delimiter@>25', 18, '2021-01-30 09:25:32'),
+(40, 'Another Reply From Me', 'Pizza<@delimiter@><p>No Pizza Allowed</p><@delimiter@>38', 18, '2021-01-30 09:26:29'),
+(41, '<p>I Used To Live Here</p>', '', 18, '2021-01-30 09:28:38'),
+(42, '<p>Hell Yeah U Are</p>', 'Pizza<@delimiter@><p>I Used To Live Here</p><@delimiter@>41', 18, '2021-01-30 09:29:06');
 
 -- --------------------------------------------------------
 
@@ -106,7 +114,8 @@ INSERT INTO `lists` (`id`, `title`, `id_card`, `id_user`, `date`) VALUES
 (80, 'Soda', '11|4|3|', 15, '2021-01-14 13:23:00'),
 (99, 'Red', '29|31|37|', 15, '2021-01-22 14:43:05'),
 (100, 'Green', '35|', 15, '2021-01-23 00:41:09'),
-(104, 'asd', '', 15, '2021-01-25 09:40:37');
+(106, 'Europe', '44|43|', 18, '2021-01-30 06:14:21'),
+(107, 'Asian', '45|', 18, '2021-01-30 06:15:05');
 
 -- --------------------------------------------------------
 
@@ -150,8 +159,8 @@ CREATE TABLE `projects` (
 
 INSERT INTO `projects` (`id`, `name`, `relation`, `id_list`, `id_user`, `is_master`, `date`) VALUES
 (1, 'Drinks', '2|', '64|74|80|', '15|', 1, '2021-01-15 17:59:06'),
-(2, 'Fruits', '', '99|100|104|', '', 0, '2021-01-15 17:59:58'),
-(3, 'Countries', '', NULL, '', 0, '2021-01-16 15:13:40');
+(2, 'Fruits', '', '99|100|', '', 0, '2021-01-15 17:59:58'),
+(3, 'Countries', '', '106|107|', '', 0, '2021-01-16 15:13:40');
 
 -- --------------------------------------------------------
 
@@ -178,7 +187,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `status`, `role`, `created_at`, `updated_at`, `verification_token`) VALUES
 (15, 'Pasta', 'nDXsrfBm1tg8ywIlhWXVwmoY2CmCzCfQ', '$2y$13$o3DIO.66FdQZOd4rzM.k5OASxkVhOosAm3Yzh4Xuc.qLn8c5cDhBi', NULL, 10, 0, 1610811948, 1610811948, 'rUyjBLlP5JqM1M7lnggdd9S-2iqC0MUE_1610811948'),
-(18, 'Pizza', 'hK1d2Ju0Gw1MK22mP2n6zyvWQHoSxscg', '$2y$13$swdrAqau.r2axAybXxc7UOkkyBS7rQycZwStumVQlI.wT7Mq5ot4C', NULL, 10, 1, 1610774960, 1610774960, '8mOTXKDtkG77pdyoCh_5GC3v2F1u9vP4_1610774959');
+(18, 'Pizza', 'hK1d2Ju0Gw1MK22mP2n6zyvWQHoSxscg', '$2y$13$5tFY/GbN/U0lDArD7WQBWeW5sJRAB0LhLqHg35XT7cggCxMYQc9xa', NULL, 10, 1, 1610774960, 1611878619, '8mOTXKDtkG77pdyoCh_5GC3v2F1u9vP4_1610774959');
 
 --
 -- Indexes for dumped tables
@@ -231,25 +240,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `cards`
 --
 ALTER TABLE `cards`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `lists`
 --
 ALTER TABLE `lists`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
 
 --
 -- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user`

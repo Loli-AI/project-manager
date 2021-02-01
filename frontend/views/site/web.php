@@ -987,7 +987,7 @@
           </div>
         </div>
         <div class="bg-white text-center p-4 rounded-b-lg">
-          <a target="_blank" href="https://wa.me/6282364386074?text=Halo,%20saya%20ingin%20bertanya" class="button text-white rounded-full bg-green-500 py-2 px-3">
+          <a target="_blank" href="https://wa.me/6281362867599?text=Halo,%20saya%20ingin%20bertanya" class="button text-white rounded-full bg-green-500 py-2 px-3">
             <span>
               <i class="fab fa-whatsapp"></i>
               Kirim Pesan

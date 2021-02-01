@@ -27,8 +27,8 @@
     overflow:hidden;
    -webkit-box-orient: vertical;
    -webkit-line-clamp: 5;
-    max-height: 115px;
-    min-height: 15px!important;*/
+    max-height: 115px;*/
+    min-height: 15px!important;
     border: 1px dashed black!important;
 }
 
