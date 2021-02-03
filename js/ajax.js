@@ -100,8 +100,8 @@ function getComments(id, cont) {
                 let reply_section = document.createElement("div");
                 let a_reply = document.createElement("a");
                 a_reply.setAttribute('class', 'btn my-2 text-left btn-light btn-sm card replySection');
-                a_reply.setAttribute('href', '#'+reply_data[2]);
-                a_reply.setAttribute('onclick', 'push('+reply_data[2]+')');
+                a_reply.setAttribute('href', '#'+reply_data[2]+"container");
+                a_reply.setAttribute('onclick', "push('"+reply_data[2]+"container')");
 
                 let reply_username = document.createElement("div");
                 reply_username.setAttribute('class', 'font-weight-bold');
@@ -118,7 +118,7 @@ function getComments(id, cont) {
             cont.appendChild(message);
             cont.appendChild(date);
             cont.appendChild(reply);
-            cont.setAttribute('id', data.response.comment_data.id);
+            cont.setAttribute('id', data.response.comment_data.id+"container");
 
         }
     });
@@ -367,6 +367,7 @@ function refreshCard(id) {
             });
         }
     });
+
 }
 
 function editCardTitle(e) {
