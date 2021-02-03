@@ -147,3 +147,10 @@ function push(id) {
     });
   }, 100);
 }
+
+function scrollBottom(element1, element2, time1, time2) {
+  setTimeout(() => {
+    $(element1).animate({ scrollTop: $(element2).height() }, time1)}
+  , time2);
+  
+}

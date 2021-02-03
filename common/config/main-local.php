@@ -3,7 +3,7 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=postube',
+            'dsn' => 'mysql:host=localhost;dbname=rangkaic_db',
             'username' => 'root',
             'password' => '',
             'charset' => 'utf8',

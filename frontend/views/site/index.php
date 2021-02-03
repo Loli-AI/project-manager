@@ -84,7 +84,7 @@
 <!-- Card Data Modal -->
 <div class="modal fade" id="card" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
-    <div class="modal-content">
+    <div id="cardContent" class="modal-content">
     <div class="modal-header">
     <h4>
       <span id="cardTitle"></span>

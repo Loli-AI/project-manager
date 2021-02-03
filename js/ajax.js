@@ -143,7 +143,7 @@ function addComment(e) {
         success: function (data) {
             $("#comment_input").summernote('code', '')
             load(0);
-            refreshCard(e.submitter.id);
+            refreshCard(e.submitter.id, true);
         }
     });
 }
@@ -281,7 +281,7 @@ function addCard(e) {
     });
 }
 
-function refreshCard(id) {
+function refreshCard(id, comment=false) {
     load(1);
     $("#comment_input").summernote({
         codeviewFilter: false,
@@ -364,6 +364,7 @@ function refreshCard(id) {
             appendData().then(() => {
                 load(0);
                 $("#card").modal("show");
+                if (comment) scrollBottom("#card", "#cardContent", 800, 600);
             });
         }
     });
@@ -962,7 +963,7 @@ function addReply(e) {
         success: function (data) {
             $("#reply_input").summernote('code', '');
             $('#reply_modal').modal('hide');
-            refreshCard($("#submit_card_desc").attr("data-id"));
+            refreshCard($("#submit_card_desc").attr("data-id"), true);
         }
     });
 }
