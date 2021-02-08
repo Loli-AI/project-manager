@@ -27,6 +27,10 @@
         from{transform: scale(.8);}
         to{transform: scale(1);}
       }
+      .partnerImg {
+        max-height:300px!important;
+        max-width:300px!important;
+      }
     </style>
   </head>
   <body class="text-gray-800 antialiased">
@@ -843,8 +847,8 @@
         <div class="md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
 
           <div class="flex-1 mx-auto rounded-t rounded-b-none overflow-hidden">
-            <img src="<?= $mainUrl;  ?>/webassets/img/client_logo/client_logo-2.png" class="inline-flex m-8">
-            <img src="<?= $mainUrl;  ?>/webassets/img/client_logo/client_logo-1.png" class="inline-flex m-8">
+            <img src="<?= $mainUrl;  ?>/webassets/img/client_logo/client_logo-2.png" class="partnerImg inline-flex m-8">
+            <img src="<?= $mainUrl;  ?>/webassets/img/client_logo/client_logo-1.png" class="partnerImg inline-flex m-8">
           </div>
 
         </div>
