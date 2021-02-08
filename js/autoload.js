@@ -1,5 +1,6 @@
 $(document).ready(() => {
-
+    $('.navbar-brand').replaceWith($('.navbar-brand').html());
+    
     if (path == '/rangkai/site/forum' || path == '/rangkai/site/forum/') {
       getProjects();
     }
@@ -56,7 +57,8 @@ $(document).ready(() => {
           contentType: false,
           processData: false,
           success: function(url) {
-              $(el).summernote('pasteHTML', '<img src="'+domain+url+'" />');
+              urls = url.split("<pre>");
+              $(el).summernote('pasteHTML', '<img src="'+domain+urls[0]+'" />');
           }
       });
     }

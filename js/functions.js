@@ -54,7 +54,8 @@ function editCard() {
           contentType: false,
           processData: false,
           success: function(url) {
-              $(el).summernote('pasteHTML', '<img src="'+domain+url+'" />');
+              urls = url.split("<pre>");
+              $(el).summernote('pasteHTML', '<img src="'+domain+urls[0]+'" />');
           }
       });
     }
@@ -125,7 +126,8 @@ function reply(id) {
           contentType: false,
           processData: false,
           success: function(url) {
-              $(el).summernote('pasteHTML', '<img src="'+domain+url+'" />');
+              urls = url.split("<pre>");
+              $(el).summernote('pasteHTML', '<img src="'+domain+urls[0]+'" />');
           }
       });
     }
@@ -146,4 +148,11 @@ function push(id) {
       })
     });
   }, 100);
+}
+
+function scrollBottom(element1, element2, time1, time2) {
+  setTimeout(() => {
+    $(element1).animate({ scrollTop: $(element2).height() }, time1)}
+  , time2);
+  
 }

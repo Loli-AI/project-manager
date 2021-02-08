@@ -7012,3 +7012,71 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1610811789.73
     'REQUEST_TIME' => 1610811789
 ]
+2021-02-03 09:51:20 [36.71.139.203][1][bde5af253b5d6c0e0e9d994ffe792acb][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: id in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Controller.php:187
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('view', Array)
+#3 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('project/view', Array)
+#4 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 /home/rangkaic/public_html/rangkai/admin/index.php(17): yii\base\Application->run()
+#6 {main}
+2021-02-03 09:51:20 [36.71.139.203][1][bde5af253b5d6c0e0e9d994ffe792acb][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => '0d7fff546b11bd6c2f4d499edcebcede'
+    '_identity-frontend' => '81a3e240e24a87aa6ac5f76cd18b5ff00fa745a6680ad9dca8332391a18a5787a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"6Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY\",2592000]\";}'
+    '_csrf-frontend' => '1e548e87f5102e63acde93d2403704f07e4ddedf9e7736ed47027ff7023f4a21a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"6D5_RXNgClhZ7mL12ejNbKGwwkb3EEAq\";}'
+    'advanced-backend' => 'bde5af253b5d6c0e0e9d994ffe792acb'
+    '_identity-backend' => 'bae93431fc8bf68587bdce3174333b775fc4d89c47768d9b3c5a917f2f82921ba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"6Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY\",2592000]\";}'
+    '_csrf-backend' => '1f324990d5a05e1e7600c9cf4e6183c8d51ce8678c6cadd623e9951f071f6765a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ZkwQaipL6Ga2cSNWeyDBCTEGahhb1IwV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://rangkai.co.id/rangkai/admin/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-GB;q=0.9,en-US;q=0.8,id;q=0.7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-frontend=0d7fff546b11bd6c2f4d499edcebcede; _identity-frontend=81a3e240e24a87aa6ac5f76cd18b5ff00fa745a6680ad9dca8332391a18a5787a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-frontend=1e548e87f5102e63acde93d2403704f07e4ddedf9e7736ed47027ff7023f4a21a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%226D5_RXNgClhZ7mL12ejNbKGwwkb3EEAq%22%3B%7D; advanced-backend=bde5af253b5d6c0e0e9d994ffe792acb; _identity-backend=bae93431fc8bf68587bdce3174333b775fc4d89c47768d9b3c5a917f2f82921ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-backend=1f324990d5a05e1e7600c9cf4e6183c8d51ce8678c6cadd623e9951f071f6765a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ZkwQaipL6Ga2cSNWeyDBCTEGahhb1IwV%22%3B%7D'
+    'HTTP_HOST' => 'rangkai.co.id'
+    'HTTP_REFERER' => 'http://rangkai.co.id/rangkai/admin/project/create'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html'
+    'REMOTE_ADDR' => '36.71.139.203'
+    'REMOTE_PORT' => '39834'
+    'SERVER_ADDR' => '103.145.226.105'
+    'SERVER_NAME' => 'rangkai.co.id'
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id'
+    'SERVER_PORT' => '80'
+    'REQUEST_SCHEME' => 'http'
+    'REQUEST_URI' => '/rangkai/admin/project/view'
+    'REDIRECT_URL' => '/rangkai/admin/project/view'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/admin/index.php'
+    'QUERY_STRING' => ''
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/admin/project/view'
+    'SCRIPT_URL' => '/rangkai/admin/project/view'
+    'SCRIPT_NAME' => '/rangkai/admin/index.php'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_SOFTWARE' => 'LiteSpeed'
+    'REQUEST_METHOD' => 'GET'
+    'X-LSCACHE' => 'on'
+    'PHP_SELF' => '/rangkai/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1612345880.6435
+    'REQUEST_TIME' => 1612345880
+    'argv' => []
+    'argc' => 0
+]

@@ -7,18 +7,15 @@ use yii\bootstrap4\ActiveForm;
 $url = explode("/", Yii::$app->request->url);
 $mainUrl = "/" . $url[1];
 $domain = $mainUrl;
+?>
 
-    NavBar::begin([
-        'brandLabel' => '<i class="fas fa-mug-hot"></i>&nbsp;&nbsp;App',
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'shadow navbar-expand-lg navbar-light bg-light sticky-top'
-        ],
-    ]);
-    ?>
-    <?php if (!Yii::$app->user->isGuest) : ?>
+
+    
+<?php if (!Yii::$app->user->isGuest) : ?>
         <?php if ((Yii::$app->request->url == $domain . "/site/forum") || (Yii::$app->request->url == $domain . "/site/forum/")) : ?>
-                <form onsubmit="searchProjects(event)" style="width:30%" class="mb-3 mt-3">
+   
+    <?php NavBar::begin([
+        'brandLabel' => '<form onsubmit="searchProjects(event)" style="width:50%;" class="mb-3 mt-3">
                     <div class="position-relative" data-placement="bottom" id="searchProjects" data-toggle="popover" data-html="true" data-content="">
                         <abbr title="Cari Projek">
                             <button type="submit" class="btn btn-dark position-absolute" style="right:0"><i class="fas fa-search"></i></button>
@@ -26,10 +23,23 @@ $domain = $mainUrl;
                         <input type="text" autocomplete="off" placeholder="Cari Projek" class="form-control" id="search" list="projects">
                     </div>
                     <datalist id="projects"></datalist>
-                </form>
-        <?php endif; ?>
+                </form>',
+        'options' => [
+            'class' => 'shadow navbar-expand-lg navbar-light bg-light sticky-top',
+        ],
+    ]); ?>
+   
+     <?php endif; ?>
+     <?php else: ?>
+     
+     <?php NavBar::begin([
+        'brandLabel' => '<i class="fas fa-mug-hot"></i>&nbsp;&nbsp;App',
+        'options' => [
+            'class' => 'shadow navbar-expand-lg navbar-light bg-light sticky-top',
+        ],
+    ]); ?>
+     
     <?php endif; ?>
-
     <?php
     
     if (Yii::$app->user->isGuest) {

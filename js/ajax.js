@@ -143,7 +143,7 @@ function addComment(e) {
         success: function (data) {
             $("#comment_input").summernote('code', '')
             load(0);
-            refreshCard(e.submitter.id);
+            refreshCard(e.submitter.id, true);
         }
     });
 }
@@ -163,7 +163,7 @@ function editDataCard(e) {
         processData: false,
         contentType: false,
         success: function (data) {
-            $("#card").modal("hide");
+            // $("#card").modal("hide");
             editCard();
             $("#card_desc_input").summernote('destroy');
             $("#card_desc_input").hide();
@@ -281,7 +281,7 @@ function addCard(e) {
     });
 }
 
-function refreshCard(id) {
+function refreshCard(id, comment=false) {
     load(1);
     $("#comment_input").summernote({
         codeviewFilter: false,
@@ -317,7 +317,8 @@ function refreshCard(id) {
           contentType: false,
           processData: false,
           success: function(url) {
-              $(el).summernote('pasteHTML', '<img src="'+domain+url+'" />');
+              urls = url.split("<pre>");
+              $(el).summernote('pasteHTML', '<img src="'+domain+urls[0]+'" />');
           }
       });
     }
@@ -364,6 +365,7 @@ function refreshCard(id) {
             appendData().then(() => {
                 load(0);
                 $("#card").modal("show");
+                if (comment) scrollBottom("#card", "#cardContent", 800, 600);
             });
         }
     });
@@ -385,7 +387,7 @@ function editCardTitle(e) {
             $('#editCardTitle').modal('toggle');
             getLists();
             setTimeout(() => {
-                $("#card").modal("hide");
+                // $("#card").modal("hide");
                 refreshCard($("#submit_card_desc").attr("data-id"));
             }, 1000);
         }
@@ -452,7 +454,7 @@ function getLists() {
             $("#titlePage").html(data.title);
 
             let col_newlist = document.createElement("div");
-            col_newlist.setAttribute('class', 'col col-3');
+            col_newlist.setAttribute('class', 'col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4');
 
             let abbr_newlist = document.createElement("abbr");
             abbr_newlist.setAttribute('title', 'Tambah Grup Topik');
@@ -477,7 +479,7 @@ function getLists() {
                 cards.pop();
 
                 let col3 = document.createElement("div");
-                col3.setAttribute('class', 'data col col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3');
+                col3.setAttribute('class', 'data col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4');
 
                 let card = document.createElement("div");
                 card.setAttribute('class', 'card shadow position-relative');
@@ -705,7 +707,7 @@ function searchProjects(e) {
             $("#titlePage").html(data.title);
 
             let col_newlist = document.createElement("div");
-            col_newlist.setAttribute('class', 'col col-3');
+            col_newlist.setAttribute('class', 'col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4');
 
             let abbr_newlist = document.createElement("abbr");
             abbr_newlist.setAttribute('title', 'Tambah Grup Topik');
@@ -730,7 +732,7 @@ function searchProjects(e) {
                 cards.pop();
 
                 let col3 = document.createElement("div");
-                col3.setAttribute('class', 'data col col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3');
+                col3.setAttribute('class', 'data col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4');
 
                 let card = document.createElement("div");
                 card.setAttribute('class', 'card shadow position-relative');
@@ -962,7 +964,7 @@ function addReply(e) {
         success: function (data) {
             $("#reply_input").summernote('code', '');
             $('#reply_modal').modal('hide');
-            refreshCard($("#submit_card_desc").attr("data-id"));
+            refreshCard($("#submit_card_desc").attr("data-id"), true);
         }
     });
 }

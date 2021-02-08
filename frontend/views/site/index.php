@@ -17,8 +17,8 @@
 <button type="button" class="btn btn-primary" data-toggle="modal" id="loadButton" data-target="#load">&nbsp;</button>
 
 <!-- Modal Loader -->
-<div class="modal" id="load" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal position-absolute" id="load" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:19999;">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="z-index:12999;">
     <div class="spinner-grow text-primary" style="width:8rem;height:8rem;" role="status"></div>
     <div class="spinner-grow text-primary" style="width:8rem;height:8rem;" role="status"></div>
     <div class="spinner-grow text-primary" style="width:8rem;height:8rem;" role="status"></div>
@@ -84,7 +84,7 @@
 <!-- Card Data Modal -->
 <div class="modal fade" id="card" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
-    <div class="modal-content">
+    <div id="cardContent" class="modal-content">
     <div class="modal-header">
     <h4>
       <span id="cardTitle"></span>

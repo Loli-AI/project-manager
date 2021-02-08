@@ -3,6 +3,11 @@ body {
     height: 100%;
 }
 
+.active {
+    background-color:#343a40!important;
+    color: white!important
+}
+
 .glyphicon {
     font-family: "Font Awesome 5 Free";
 }

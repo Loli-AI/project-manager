@@ -1,0 +1,1133 @@
+[03-Feb-2021 09:53:13 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-GB;q=0.9,en-US;q=0.8,id;q=0.7',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryqBBOuu2oWZ5iOtbL',
+    'CONTENT_LENGTH' => '1852792',
+    'HTTP_COOKIE' => 'advanced-frontend=0d7fff546b11bd6c2f4d499edcebcede; _identity-frontend=81a3e240e24a87aa6ac5f76cd18b5ff00fa745a6680ad9dca8332391a18a5787a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-frontend=1e548e87f5102e63acde93d2403704f07e4ddedf9e7736ed47027ff7023f4a21a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%226D5_RXNgClhZ7mL12ejNbKGwwkb3EEAq%22%3B%7D; advanced-backend=bde5af253b5d6c0e0e9d994ffe792acb; _identity-backend=bae93431fc8bf68587bdce3174333b775fc4d89c47768d9b3c5a917f2f82921ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-backend=1f324990d5a05e1e7600c9cf4e6183c8d51ce8678c6cadd623e9951f071f6765a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ZkwQaipL6Ga2cSNWeyDBCTEGahhb1IwV%22%3B%7D',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_REFERER' => 'http://rangkai.co.id/rangkai/site/forum',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36',
+    'HTTP_X_CSRF_TOKEN' => '_PxnkeThFsAL2NQVlmMdDTpspg5RPrTUCBNzdpDcPbHKuFLOtrlYp0i0vE-hDlE8CAnMQDN186N_eBFF1Zl8wA==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_ORIGIN' => 'http://rangkai.co.id',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '36.71.139.203',
+    'REMOTE_PORT' => '49457',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/action/upload-image',
+    'REDIRECT_URL' => '/rangkai/action/upload-image',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/action/upload-image',
+    'SCRIPT_URL' => '/rangkai/action/upload-image',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'POST',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612345993.2880918979644775390625,
+    'REQUEST_TIME' => 1612345993,
+    'argv' => [],
+    'argc' => 0,
+]
+[03-Feb-2021 09:58:23 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-GB;q=0.9,en-US;q=0.8,id;q=0.7',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary2DsXqWUpBID4k9tE',
+    'CONTENT_LENGTH' => '58171',
+    'HTTP_COOKIE' => 'advanced-frontend=0d7fff546b11bd6c2f4d499edcebcede; _identity-frontend=81a3e240e24a87aa6ac5f76cd18b5ff00fa745a6680ad9dca8332391a18a5787a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-frontend=1e548e87f5102e63acde93d2403704f07e4ddedf9e7736ed47027ff7023f4a21a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%226D5_RXNgClhZ7mL12ejNbKGwwkb3EEAq%22%3B%7D; advanced-backend=bde5af253b5d6c0e0e9d994ffe792acb; _identity-backend=bae93431fc8bf68587bdce3174333b775fc4d89c47768d9b3c5a917f2f82921ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-backend=1f324990d5a05e1e7600c9cf4e6183c8d51ce8678c6cadd623e9951f071f6765a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ZkwQaipL6Ga2cSNWeyDBCTEGahhb1IwV%22%3B%7D',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_REFERER' => 'http://rangkai.co.id/rangkai/site/forum',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36',
+    'HTTP_X_CSRF_TOKEN' => 'FkbhUV2365-CkHfCfhmEGF6RHOR-JJoMlT0k72iT4DsgAtQOD--l-MH8H5hJdMgpbPR2qhxv3XviVkbcLdahSg==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_ORIGIN' => 'http://rangkai.co.id',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '36.71.139.203',
+    'REMOTE_PORT' => '10294',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/action/upload-image',
+    'REDIRECT_URL' => '/rangkai/action/upload-image',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/action/upload-image',
+    'SCRIPT_URL' => '/rangkai/action/upload-image',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'POST',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612346303.023991107940673828125,
+    'REQUEST_TIME' => 1612346303,
+    'argv' => [],
+    'argc' => 0,
+]
+[03-Feb-2021 11:26:29 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-GB;q=0.9,en-US;q=0.8,id;q=0.7',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryaExnBH8NoscAd8cy',
+    'CONTENT_LENGTH' => '361602',
+    'HTTP_COOKIE' => '_identity-frontend=81a3e240e24a87aa6ac5f76cd18b5ff00fa745a6680ad9dca8332391a18a5787a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _identity-backend=bae93431fc8bf68587bdce3174333b775fc4d89c47768d9b3c5a917f2f82921ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-frontend=6493247f662e6a4a0d6d37d38a2a9f4a87d36f7e6f65dafd4695260e63f08bffa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22V5i81Qi3eOyLQQltnkS9g51CpW0bRkb_%22%3B%7D; advanced-frontend=7bf72fd764be0886d96a31069dff079d',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_REFERER' => 'http://rangkai.co.id/rangkai/site/forum',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36',
+    'HTTP_X_CSRF_TOKEN' => 'k0beyx0qGOYVMml8gsfJP17PHQAskVbckfPiv64BN7jFc7fzLHtx1XB9EDDTlqVLMKROOUukZ5_hpNLd_GpV5w==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_ORIGIN' => 'http://rangkai.co.id',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '103.111.141.90',
+    'REMOTE_PORT' => '1343',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/action/upload-image',
+    'REDIRECT_URL' => '/rangkai/action/upload-image',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/action/upload-image',
+    'SCRIPT_URL' => '/rangkai/action/upload-image',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'POST',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612351589.628282070159912109375,
+    'REQUEST_TIME' => 1612351589,
+    'argv' => [],
+    'argc' => 0,
+]
+[03-Feb-2021 11:29:26 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-GB;q=0.9,en-US;q=0.8,id;q=0.7',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarysyAGdkGZ4r9uBW9l',
+    'CONTENT_LENGTH' => '241948',
+    'HTTP_COOKIE' => '_identity-frontend=81a3e240e24a87aa6ac5f76cd18b5ff00fa745a6680ad9dca8332391a18a5787a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _identity-backend=bae93431fc8bf68587bdce3174333b775fc4d89c47768d9b3c5a917f2f82921ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-frontend=6493247f662e6a4a0d6d37d38a2a9f4a87d36f7e6f65dafd4695260e63f08bffa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22V5i81Qi3eOyLQQltnkS9g51CpW0bRkb_%22%3B%7D; advanced-frontend=7bf72fd764be0886d96a31069dff079d',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_REFERER' => 'http://rangkai.co.id/rangkai/site/forum',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36',
+    'HTTP_X_CSRF_TOKEN' => 'myfpWItnZbBCuKOA3K4U_AklC3-WOcQ_vvvVJAstI4XNEoBgujYMgyf32syN_3iIZ05YRvEM9XzOrOVGWUZB2g==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_ORIGIN' => 'http://rangkai.co.id',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '103.111.141.90',
+    'REMOTE_PORT' => '1487',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/action/upload-image',
+    'REDIRECT_URL' => '/rangkai/action/upload-image',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/action/upload-image',
+    'SCRIPT_URL' => '/rangkai/action/upload-image',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'POST',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612351766.6394889354705810546875,
+    'REQUEST_TIME' => 1612351766,
+    'argv' => [],
+    'argc' => 0,
+]
+[03-Feb-2021 11:32:14 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-GB;q=0.9,en-US;q=0.8,id;q=0.7',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryOFA1lHvX0E5BIBFE',
+    'CONTENT_LENGTH' => '58171',
+    'HTTP_COOKIE' => '_identity-frontend=81a3e240e24a87aa6ac5f76cd18b5ff00fa745a6680ad9dca8332391a18a5787a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _identity-backend=bae93431fc8bf68587bdce3174333b775fc4d89c47768d9b3c5a917f2f82921ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-frontend=6493247f662e6a4a0d6d37d38a2a9f4a87d36f7e6f65dafd4695260e63f08bffa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22V5i81Qi3eOyLQQltnkS9g51CpW0bRkb_%22%3B%7D; advanced-frontend=7bf72fd764be0886d96a31069dff079d',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_REFERER' => 'http://rangkai.co.id/rangkai/site/forum',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36',
+    'HTTP_X_CSRF_TOKEN' => 'cmlBJBzbwvkRzLHCFXmHJdqXH0EOM6QCpbztKKD2940kXCgcLYqrynSDyI5EKOtRtPxMeGkGlUHV691K8p2V0g==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_ORIGIN' => 'http://rangkai.co.id',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '103.111.141.90',
+    'REMOTE_PORT' => '1643',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/action/upload-image',
+    'REDIRECT_URL' => '/rangkai/action/upload-image',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/action/upload-image',
+    'SCRIPT_URL' => '/rangkai/action/upload-image',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'POST',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612351934.4738209247589111328125,
+    'REQUEST_TIME' => 1612351934,
+    'argv' => [],
+    'argc' => 0,
+]
+[03-Feb-2021 11:33:40 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-GB;q=0.9,en-US;q=0.8,id;q=0.7',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryo4kBM7rnpv89qF3V',
+    'CONTENT_LENGTH' => '361602',
+    'HTTP_COOKIE' => '_identity-frontend=81a3e240e24a87aa6ac5f76cd18b5ff00fa745a6680ad9dca8332391a18a5787a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _identity-backend=bae93431fc8bf68587bdce3174333b775fc4d89c47768d9b3c5a917f2f82921ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-frontend=6493247f662e6a4a0d6d37d38a2a9f4a87d36f7e6f65dafd4695260e63f08bffa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22V5i81Qi3eOyLQQltnkS9g51CpW0bRkb_%22%3B%7D; advanced-frontend=7bf72fd764be0886d96a31069dff079d',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_REFERER' => 'http://rangkai.co.id/rangkai/site/forum',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36',
+    'HTTP_X_CSRF_TOKEN' => 'LablRrNqiAMzm9mitAu5vP9ff3H_4Mun1BRO3N4uAXR7k4x-gjvhMFbUoO7lWtXIkTQsSJjV-uSkQ36-jEVjKw==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_ORIGIN' => 'http://rangkai.co.id',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '103.111.141.90',
+    'REMOTE_PORT' => '1720',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/action/upload-image',
+    'REDIRECT_URL' => '/rangkai/action/upload-image',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/action/upload-image',
+    'SCRIPT_URL' => '/rangkai/action/upload-image',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'POST',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612352020.2527179718017578125,
+    'REQUEST_TIME' => 1612352020,
+    'argv' => [],
+    'argc' => 0,
+]
+[03-Feb-2021 11:35:21 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-GB;q=0.9,en-US;q=0.8,id;q=0.7',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryCJHHD5lAbR6rfrYM',
+    'CONTENT_LENGTH' => '194848',
+    'HTTP_COOKIE' => 'advanced-frontend=398baa5b25622c3f650144dc79b09063; _identity-frontend=81a3e240e24a87aa6ac5f76cd18b5ff00fa745a6680ad9dca8332391a18a5787a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-frontend=0223914eb68adfc528ac584ed97ef404c4126c1417d6c2948f9fc89a8eb208bda%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227GesOeuNjhgWZ3hSfCDntr6MhgILmlfq%22%3B%7D',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_REFERER' => 'http://rangkai.co.id/rangkai/site/forum',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 7.1.1; CPH1801) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Mobile Safari/537.36',
+    'HTTP_ORIGIN' => 'http://rangkai.co.id',
+    'HTTP_X_CSRF_TOKEN' => 'ifYREaLiBOwA1cO4t72nV4IAMWwh5RgcJZzXCMtpL32-sXRi7Ydxomq9pO_tjs8E5EN1AlWXLlFN-55EpgVJDA==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_SAVE_DATA' => 'on',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '103.111.141.90',
+    'REMOTE_PORT' => '39824',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/action/upload-image',
+    'REDIRECT_URL' => '/rangkai/action/upload-image',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/action/upload-image',
+    'SCRIPT_URL' => '/rangkai/action/upload-image',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'POST',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612352121.25693798065185546875,
+    'REQUEST_TIME' => 1612352121,
+    'argv' => [],
+    'argc' => 0,
+]
+[03-Feb-2021 11:41:55 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-GB;q=0.9,en-US;q=0.8,id;q=0.7',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryvAAuCnYB0dGHqbxB',
+    'CONTENT_LENGTH' => '44100',
+    'HTTP_COOKIE' => '_identity-frontend=81a3e240e24a87aa6ac5f76cd18b5ff00fa745a6680ad9dca8332391a18a5787a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _identity-backend=bae93431fc8bf68587bdce3174333b775fc4d89c47768d9b3c5a917f2f82921ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-frontend=6493247f662e6a4a0d6d37d38a2a9f4a87d36f7e6f65dafd4695260e63f08bffa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22V5i81Qi3eOyLQQltnkS9g51CpW0bRkb_%22%3B%7D; advanced-frontend=7bf72fd764be0886d96a31069dff079d',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_REFERER' => 'http://rangkai.co.id/rangkai/site/forum',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36',
+    'HTTP_X_CSRF_TOKEN' => 'Tc1YtD-I7daSTBoFikUj-uHp7ia0cgvZnmryGXS3t9Qb-DGMDtmE5fcDY0nbFE-Oj4K9H9NHOpruPcJ7JtzViw==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_ORIGIN' => 'http://rangkai.co.id',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '103.111.141.90',
+    'REMOTE_PORT' => '2170',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/action/upload-image',
+    'REDIRECT_URL' => '/rangkai/action/upload-image',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/action/upload-image',
+    'SCRIPT_URL' => '/rangkai/action/upload-image',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'POST',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612352515.6899058818817138671875,
+    'REQUEST_TIME' => 1612352515,
+    'argv' => [],
+    'argc' => 0,
+]
+[03-Feb-2021 13:55:42 UTC] An Error occurred while handling another error:
+yii\base\InvalidCallException: Unexpected yii\bootstrap4\NavBar::end() call. A matching begin() is not found. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Widget.php:121
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/frontend/views/layouts/_header.php(73): yii\base\Widget::end()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(348): require('/home/rangkaic/...')
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/rangkaic/...', Array)
+#3 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/rangkaic/...', Array, NULL)
+#4 /home/rangkaic/public_html/rangkai/frontend/views/layouts/main.php(39): yii\base\View->render('_header.php')
+#5 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(348): require('/home/rangkaic/...')
+#6 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/rangkaic/...', Array)
+#7 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/rangkaic/...', Array, Object(frontend\controllers\SiteController))
+#8 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('\r\n<div class="s...')
+#9 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#10 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#11 [internal function]: yii\web\ErrorAction->run()
+#12 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#13 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#14 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#15 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#16 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#17 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#18 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('favicon.ico', Array)
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-GB;q=0.9,en-US;q=0.8,id;q=0.7',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_identity-backend=bae93431fc8bf68587bdce3174333b775fc4d89c47768d9b3c5a917f2f82921ba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _identity-frontend=81a3e240e24a87aa6ac5f76cd18b5ff00fa745a6680ad9dca8332391a18a5787a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-frontend=5c9d06e87b3f2016ec14119bfcc15159cc6f92f202d5e0099ad69d331c27209aa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%223v96mIuJDD3LvWelNvP63CnRL66VYsm-%22%3B%7D; advanced-frontend=1db558f029dbb15fd76c8f8dfe1a26a0; advanced-backend=5e97867506ce7fd2d1d032fdea233bf5; _csrf-backend=71185c4c7086de6dd01adc3cb4c30b48d211449e67bfa79a3be20231f91170a8a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%2242CiFQS0RN3BzX2RkeHwutzcxqETXkeS%22%3B%7D',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_REFERER' => 'http://rangkai.co.id/rangkai/admin/',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '103.111.141.90',
+    'REMOTE_PORT' => '51386',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/favicon.ico',
+    'REDIRECT_URL' => '/rangkai/favicon.ico',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/favicon.ico',
+    'SCRIPT_URL' => '/rangkai/favicon.ico',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612360542.504806041717529296875,
+    'REQUEST_TIME' => 1612360542,
+    'argv' => [],
+    'argc' => 0,
+]
+[03-Feb-2021 13:55:44 UTC] An Error occurred while handling another error:
+yii\base\InvalidCallException: Unexpected yii\bootstrap4\NavBar::end() call. A matching begin() is not found. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Widget.php:121
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/frontend/views/layouts/_header.php(73): yii\base\Widget::end()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(348): require('/home/rangkaic/...')
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/rangkaic/...', Array)
+#3 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/rangkaic/...', Array, NULL)
+#4 /home/rangkaic/public_html/rangkai/frontend/views/layouts/main.php(39): yii\base\View->render('_header.php')
+#5 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(348): require('/home/rangkaic/...')
+#6 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/rangkaic/...', Array)
+#7 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/rangkaic/...', Array, Object(frontend\controllers\SiteController))
+#8 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('\r\n<div class="s...')
+#9 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#10 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#11 [internal function]: yii\web\ErrorAction->run()
+#12 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#13 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#14 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#15 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#16 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#17 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#18 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('favicon.ico', Array)
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-GB;q=0.9,en-US;q=0.8,id;q=0.7',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_identity-frontend=81a3e240e24a87aa6ac5f76cd18b5ff00fa745a6680ad9dca8332391a18a5787a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-frontend=5c9d06e87b3f2016ec14119bfcc15159cc6f92f202d5e0099ad69d331c27209aa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%223v96mIuJDD3LvWelNvP63CnRL66VYsm-%22%3B%7D; advanced-frontend=1db558f029dbb15fd76c8f8dfe1a26a0; _csrf-backend=71185c4c7086de6dd01adc3cb4c30b48d211449e67bfa79a3be20231f91170a8a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%2242CiFQS0RN3BzX2RkeHwutzcxqETXkeS%22%3B%7D; advanced-backend=9d5d7b8b787c036a749832e0a928a053',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_REFERER' => 'http://rangkai.co.id/rangkai/admin/site/login',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '103.111.141.90',
+    'REMOTE_PORT' => '51386',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/favicon.ico',
+    'REDIRECT_URL' => '/rangkai/favicon.ico',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/favicon.ico',
+    'SCRIPT_URL' => '/rangkai/favicon.ico',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612360544.8199670314788818359375,
+    'REQUEST_TIME' => 1612360544,
+    'argv' => [],
+    'argc' => 0,
+]
+[03-Feb-2021 13:57:10 UTC] An Error occurred while handling another error:
+yii\base\InvalidCallException: Unexpected yii\bootstrap4\NavBar::end() call. A matching begin() is not found. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Widget.php:121
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/frontend/views/layouts/_header.php(73): yii\base\Widget::end()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(348): require('/home/rangkaic/...')
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/rangkaic/...', Array)
+#3 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/rangkaic/...', Array, NULL)
+#4 /home/rangkaic/public_html/rangkai/frontend/views/layouts/main.php(39): yii\base\View->render('_header.php')
+#5 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(348): require('/home/rangkaic/...')
+#6 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/rangkaic/...', Array)
+#7 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/rangkaic/...', Array, Object(frontend\controllers\SiteController))
+#8 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('\r\n<div class="s...')
+#9 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#10 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#11 [internal function]: yii\web\ErrorAction->run()
+#12 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#13 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#14 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#15 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#16 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#17 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#18 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('favicon.ico', Array)
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-GB;q=0.9,en-US;q=0.8,id;q=0.7',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_identity-frontend=81a3e240e24a87aa6ac5f76cd18b5ff00fa745a6680ad9dca8332391a18a5787a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-frontend=5c9d06e87b3f2016ec14119bfcc15159cc6f92f202d5e0099ad69d331c27209aa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%223v96mIuJDD3LvWelNvP63CnRL66VYsm-%22%3B%7D; advanced-frontend=1db558f029dbb15fd76c8f8dfe1a26a0; _csrf-backend=71185c4c7086de6dd01adc3cb4c30b48d211449e67bfa79a3be20231f91170a8a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%2242CiFQS0RN3BzX2RkeHwutzcxqETXkeS%22%3B%7D; advanced-backend=9d5d7b8b787c036a749832e0a928a053',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_REFERER' => 'http://rangkai.co.id/rangkai/admin/site/login',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '103.111.141.90',
+    'REMOTE_PORT' => '51408',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/favicon.ico',
+    'REDIRECT_URL' => '/rangkai/favicon.ico',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/favicon.ico',
+    'SCRIPT_URL' => '/rangkai/favicon.ico',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612360630.161591053009033203125,
+    'REQUEST_TIME' => 1612360630,
+    'argv' => [],
+    'argc' => 0,
+]
+[03-Feb-2021 13:57:12 UTC] An Error occurred while handling another error:
+yii\base\InvalidCallException: Unexpected yii\bootstrap4\NavBar::end() call. A matching begin() is not found. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Widget.php:121
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/frontend/views/layouts/_header.php(73): yii\base\Widget::end()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(348): require('/home/rangkaic/...')
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/rangkaic/...', Array)
+#3 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/rangkaic/...', Array, NULL)
+#4 /home/rangkaic/public_html/rangkai/frontend/views/layouts/main.php(39): yii\base\View->render('_header.php')
+#5 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(348): require('/home/rangkaic/...')
+#6 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/rangkaic/...', Array)
+#7 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/rangkaic/...', Array, Object(frontend\controllers\SiteController))
+#8 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('\r\n<div class="s...')
+#9 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#10 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#11 [internal function]: yii\web\ErrorAction->run()
+#12 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#13 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#14 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#15 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#16 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#17 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#18 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "favicon.ico". in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('favicon.ico', Array)
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-GB;q=0.9,en-US;q=0.8,id;q=0.7',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_identity-frontend=81a3e240e24a87aa6ac5f76cd18b5ff00fa745a6680ad9dca8332391a18a5787a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-frontend=5c9d06e87b3f2016ec14119bfcc15159cc6f92f202d5e0099ad69d331c27209aa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%223v96mIuJDD3LvWelNvP63CnRL66VYsm-%22%3B%7D; advanced-frontend=1db558f029dbb15fd76c8f8dfe1a26a0; _csrf-backend=71185c4c7086de6dd01adc3cb4c30b48d211449e67bfa79a3be20231f91170a8a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%2242CiFQS0RN3BzX2RkeHwutzcxqETXkeS%22%3B%7D; advanced-backend=9d5d7b8b787c036a749832e0a928a053',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_REFERER' => 'http://rangkai.co.id/rangkai/admin/site/login',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '103.111.141.90',
+    'REMOTE_PORT' => '51411',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/favicon.ico',
+    'REDIRECT_URL' => '/rangkai/favicon.ico',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/favicon.ico',
+    'SCRIPT_URL' => '/rangkai/favicon.ico',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612360632.156526088714599609375,
+    'REQUEST_TIME' => 1612360632,
+    'argv' => [],
+    'argc' => 0,
+]
+[03-Feb-2021 14:10:49 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-GB;q=0.9,en-US;q=0.8,id;q=0.7',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryPmnnTuuijrkAZlsf',
+    'CONTENT_LENGTH' => '58171',
+    'HTTP_COOKIE' => '_csrf-backend=71185c4c7086de6dd01adc3cb4c30b48d211449e67bfa79a3be20231f91170a8a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%2242CiFQS0RN3BzX2RkeHwutzcxqETXkeS%22%3B%7D; advanced-backend=9d5d7b8b787c036a749832e0a928a053; advanced-frontend=d9ae19e0c0675d5a542fdbb1a3c5798c; _identity-frontend=81a3e240e24a87aa6ac5f76cd18b5ff00fa745a6680ad9dca8332391a18a5787a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-frontend=7790933ffe9b4bdd52a868640a06107131ad115a86bf5443b997e15f1e1dd2e4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GnO9lTuSJWuqeicTOaCL6bYAAezE-TOo%22%3B%7D',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_REFERER' => 'http://rangkai.co.id/rangkai/site/forum',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36',
+    'HTTP_X_CSRF_TOKEN' => 'PU_WhZMnrNOSno68dhmySqDQprqs61zWhFNFNkzNMsN6IZm8_3PZgNjJ-80TcNEe77Hl9pqJBZfFNj9zYZl9rA==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_ORIGIN' => 'http://rangkai.co.id',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '103.111.141.90',
+    'REMOTE_PORT' => '51919',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/action/upload-image',
+    'REDIRECT_URL' => '/rangkai/action/upload-image',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/action/upload-image',
+    'SCRIPT_URL' => '/rangkai/action/upload-image',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'POST',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612361449.5989120006561279296875,
+    'REQUEST_TIME' => 1612361449,
+    'argv' => [],
+    'argc' => 0,
+]
+[03-Feb-2021 14:11:05 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/rangkaic/public_html/rangkai/frontend/controllers/ActionController.php on line 587. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php:373
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Response.php(346): yii\web\Response->sendHeaders()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-GB;q=0.9,en-US;q=0.8,id;q=0.7',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryl9maXlNyY9ztdXqb',
+    'CONTENT_LENGTH' => '58171',
+    'HTTP_COOKIE' => '_csrf-backend=71185c4c7086de6dd01adc3cb4c30b48d211449e67bfa79a3be20231f91170a8a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%2242CiFQS0RN3BzX2RkeHwutzcxqETXkeS%22%3B%7D; advanced-backend=9d5d7b8b787c036a749832e0a928a053; advanced-frontend=d9ae19e0c0675d5a542fdbb1a3c5798c; _identity-frontend=81a3e240e24a87aa6ac5f76cd18b5ff00fa745a6680ad9dca8332391a18a5787a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%226Gt8-2X2ilDjTcI8HFCE1AItjGaeZQoY%22%2C2592000%5D%22%3B%7D; _csrf-frontend=7790933ffe9b4bdd52a868640a06107131ad115a86bf5443b997e15f1e1dd2e4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GnO9lTuSJWuqeicTOaCL6bYAAezE-TOo%22%3B%7D',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_REFERER' => 'http://rangkai.co.id/rangkai/site/forum',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36',
+    'HTTP_X_CSRF_TOKEN' => 'PU_WhZMnrNOSno68dhmySqDQprqs61zWhFNFNkzNMsN6IZm8_3PZgNjJ-80TcNEe77Hl9pqJBZfFNj9zYZl9rA==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_ORIGIN' => 'http://rangkai.co.id',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '103.111.141.90',
+    'REMOTE_PORT' => '51922',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/action/upload-image',
+    'REDIRECT_URL' => '/rangkai/action/upload-image',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/action/upload-image',
+    'SCRIPT_URL' => '/rangkai/action/upload-image',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'POST',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612361465.940248966217041015625,
+    'REQUEST_TIME' => 1612361465,
+    'argv' => [],
+    'argc' => 0,
+]
+[04-Feb-2021 07:30:06 UTC] An Error occurred while handling another error:
+yii\base\InvalidCallException: Unexpected yii\bootstrap4\NavBar::end() call. A matching begin() is not found. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Widget.php:121
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/frontend/views/layouts/_header.php(73): yii\base\Widget::end()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(348): require('/home/rangkaic/...')
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/rangkaic/...', Array)
+#3 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/rangkaic/...', Array, NULL)
+#4 /home/rangkaic/public_html/rangkai/frontend/views/layouts/main.php(39): yii\base\View->render('_header.php')
+#5 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(348): require('/home/rangkaic/...')
+#6 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/rangkaic/...', Array)
+#7 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/rangkaic/...', Array, Object(frontend\controllers\SiteController))
+#8 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('\r\n<div class="s...')
+#9 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#10 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#11 [internal function]: yii\web\ErrorAction->run()
+#12 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#13 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#14 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#15 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#16 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#17 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#18 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "webadmin". in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('webadmin', Array)
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => 'advanced-frontend=6b5d16d2f4de321a0cd027881d07a80e; _identity-frontend=b77f98b44df37d4ec94c28e090eaf2bd374431e01819cecfbf0ec100f193451ca%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22IQR1AaFcUP_rraGJeDtckogXXCGOxm08%22%2C2592000%5D%22%3B%7D; _csrf-frontend=96a7e2e0d937428743e38bd006be2f52dbe67eb50f87229c1288fb93e7b024eea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22XwBg3954lXR1AlMbJIf3-AuY5O486QoR%22%3B%7D',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36 Edg/88.0.705.56',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '36.71.138.29',
+    'REMOTE_PORT' => '38006',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/webadmin',
+    'REDIRECT_URL' => '/rangkai/webadmin',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/webadmin',
+    'SCRIPT_URL' => '/rangkai/webadmin',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612423806.8574440479278564453125,
+    'REQUEST_TIME' => 1612423806,
+    'argv' => [],
+    'argc' => 0,
+]
+[04-Feb-2021 07:30:29 UTC] An Error occurred while handling another error:
+yii\base\InvalidCallException: Unexpected yii\bootstrap4\NavBar::end() call. A matching begin() is not found. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Widget.php:121
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/frontend/views/layouts/_header.php(73): yii\base\Widget::end()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(348): require('/home/rangkaic/...')
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/rangkaic/...', Array)
+#3 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/rangkaic/...', Array, NULL)
+#4 /home/rangkaic/public_html/rangkai/frontend/views/layouts/main.php(39): yii\base\View->render('_header.php')
+#5 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(348): require('/home/rangkaic/...')
+#6 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/rangkaic/...', Array)
+#7 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/rangkaic/...', Array, Object(frontend\controllers\SiteController))
+#8 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('\r\n<div class="s...')
+#9 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#10 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#11 [internal function]: yii\web\ErrorAction->run()
+#12 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#13 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#14 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#15 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#16 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#17 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#18 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "cpanel". in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('cpanel', Array)
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => 'advanced-frontend=6b5d16d2f4de321a0cd027881d07a80e; _identity-frontend=b77f98b44df37d4ec94c28e090eaf2bd374431e01819cecfbf0ec100f193451ca%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22IQR1AaFcUP_rraGJeDtckogXXCGOxm08%22%2C2592000%5D%22%3B%7D; _csrf-frontend=96a7e2e0d937428743e38bd006be2f52dbe67eb50f87229c1288fb93e7b024eea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22XwBg3954lXR1AlMbJIf3-AuY5O486QoR%22%3B%7D',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36 Edg/88.0.705.56',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '36.71.138.29',
+    'REMOTE_PORT' => '23891',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/cpanel',
+    'REDIRECT_URL' => '/rangkai/cpanel',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/cpanel',
+    'SCRIPT_URL' => '/rangkai/cpanel',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612423828.98760509490966796875,
+    'REQUEST_TIME' => 1612423828,
+    'argv' => [],
+    'argc' => 0,
+]
+[04-Feb-2021 07:30:35 UTC] An Error occurred while handling another error:
+yii\base\InvalidCallException: Unexpected yii\bootstrap4\NavBar::end() call. A matching begin() is not found. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Widget.php:121
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/frontend/views/layouts/_header.php(73): yii\base\Widget::end()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(348): require('/home/rangkaic/...')
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/rangkaic/...', Array)
+#3 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/rangkaic/...', Array, NULL)
+#4 /home/rangkaic/public_html/rangkai/frontend/views/layouts/main.php(39): yii\base\View->render('_header.php')
+#5 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(348): require('/home/rangkaic/...')
+#6 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/rangkaic/...', Array)
+#7 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/rangkaic/...', Array, Object(frontend\controllers\SiteController))
+#8 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('\r\n<div class="s...')
+#9 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#10 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#11 [internal function]: yii\web\ErrorAction->run()
+#12 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#13 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#14 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#15 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#16 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#17 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#18 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "cpanel". in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('cpanel', Array)
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => 'advanced-frontend=6b5d16d2f4de321a0cd027881d07a80e; _identity-frontend=b77f98b44df37d4ec94c28e090eaf2bd374431e01819cecfbf0ec100f193451ca%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22IQR1AaFcUP_rraGJeDtckogXXCGOxm08%22%2C2592000%5D%22%3B%7D; _csrf-frontend=96a7e2e0d937428743e38bd006be2f52dbe67eb50f87229c1288fb93e7b024eea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22XwBg3954lXR1AlMbJIf3-AuY5O486QoR%22%3B%7D',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36 Edg/88.0.705.56',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '36.71.138.29',
+    'REMOTE_PORT' => '23891',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/cpanel',
+    'REDIRECT_URL' => '/rangkai/cpanel',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/cpanel',
+    'SCRIPT_URL' => '/rangkai/cpanel',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612423835.8993990421295166015625,
+    'REQUEST_TIME' => 1612423835,
+    'argv' => [],
+    'argc' => 0,
+]
+[04-Feb-2021 07:30:58 UTC] An Error occurred while handling another error:
+yii\base\InvalidCallException: Unexpected yii\bootstrap4\NavBar::end() call. A matching begin() is not found. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Widget.php:121
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/frontend/views/layouts/_header.php(73): yii\base\Widget::end()
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(348): require('/home/rangkaic/...')
+#2 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/rangkaic/...', Array)
+#3 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/rangkaic/...', Array, NULL)
+#4 /home/rangkaic/public_html/rangkai/frontend/views/layouts/main.php(39): yii\base\View->render('_header.php')
+#5 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(348): require('/home/rangkaic/...')
+#6 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/rangkaic/...', Array)
+#7 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(425): yii\base\View->renderFile('/home/rangkaic/...', Array, Object(frontend\controllers\SiteController))
+#8 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(411): yii\base\Controller->renderContent('\r\n<div class="s...')
+#9 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#10 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#11 [internal function]: yii\web\ErrorAction->run()
+#12 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#13 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\Action->runWithParams(Array)
+#14 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Module.php(534): yii\base\Controller->runAction('error', Array)
+#15 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#16 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#17 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#18 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "cpanel". in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('cpanel', Array)
+#1 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /home/rangkaic/public_html/rangkai/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/rangkaic/public_html/rangkai/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/bin:/usr/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => 'advanced-frontend=6b5d16d2f4de321a0cd027881d07a80e; _identity-frontend=b77f98b44df37d4ec94c28e090eaf2bd374431e01819cecfbf0ec100f193451ca%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22IQR1AaFcUP_rraGJeDtckogXXCGOxm08%22%2C2592000%5D%22%3B%7D; _csrf-frontend=96a7e2e0d937428743e38bd006be2f52dbe67eb50f87229c1288fb93e7b024eea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22XwBg3954lXR1AlMbJIf3-AuY5O486QoR%22%3B%7D',
+    'HTTP_HOST' => 'rangkai.co.id',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36 Edg/88.0.705.56',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/rangkaic/public_html',
+    'REMOTE_ADDR' => '36.71.138.29',
+    'REMOTE_PORT' => '62982',
+    'SERVER_ADDR' => '103.145.226.105',
+    'SERVER_NAME' => 'rangkai.co.id',
+    'SERVER_ADMIN' => 'webmaster@rangkai.co.id',
+    'SERVER_PORT' => '80',
+    'REQUEST_SCHEME' => 'http',
+    'REQUEST_URI' => '/rangkai/cpanel',
+    'REDIRECT_URL' => '/rangkai/cpanel',
+    'REDIRECT_STATUS' => '200',
+    'SCRIPT_FILENAME' => '/home/rangkaic/public_html/rangkai/index.php',
+    'QUERY_STRING' => '',
+    'SCRIPT_URI' => 'http://rangkai.co.id/rangkai/cpanel',
+    'SCRIPT_URL' => '/rangkai/cpanel',
+    'SCRIPT_NAME' => '/rangkai/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/rangkai/index.php',
+    'REQUEST_TIME_FLOAT' => 1612423858.0083539485931396484375,
+    'REQUEST_TIME' => 1612423858,
+    'argv' => [],
+    'argc' => 0,
+]

@@ -969,7 +969,7 @@
 
     <div class="absolute right-0 bottom-0">
 
-      <div id="popup" class="fixed shadow-lg" style="right: 45px;bottom: 120px;width: 350px;cursor: pointer">
+      <div id="popup" class="fixed shadow-lg" style="right: 45px;bottom: 120px;width: 300px;cursor: pointer">
         <div class="bg-green-600 w-full p-3 text-white font-bold rounded-t-lg">
           <img src="<?= $mainUrl;  ?>/webassets/img/favicon.png" class="inline-block pb-4" style="width: 55px;">
           <span class="inline-block py-auto">
